@@ -11,9 +11,10 @@ related_targets: ["src/pages/WorkPage.tsx","src/pages/StatusPage.tsx"]
 - Visitor mode: Persuade.
 - Audience: researchers and engineers handling mesh, point-cloud, USD, and codec sequences.
 - Job: understand what Open4D can be checked today, inspect real output, and decide whether to describe a workflow problem.
-- Primary action: answer the three workflow questions in GitHub Discussions.
-- Proof: five real frames and playback, the repository comparison renderer, one timed decoder result with its memory cost, research records, and an explicit current-status register.
+- Primary action: “Describe your workflow” in GitHub Discussions; secondary action: “Browse the repository.”
+- Proof: five selectable real frames in a fixed instrument, a task-oriented repository register, one static horizontally scrollable comparison with a native error key, equal research records with local scope notes, a compact current-scope row, and a plain benchmark table on the Work route.
 - Constraints: use ordinary language; do not imply a stable shared API or complete workflow; keep every limitation next to its result; interface colors stay near-monochrome while source evidence keeps its native colors.
-- Chosen direction: a motion-analysis contact sheet on a warm-white measurement surface with carbon fields, registered rules, and compressed sans-serif statements.
-- Memorable moment: the first five-frame strip turns into the real viewer only when the visitor presses play.
+- Chosen direction: a versioned repository brief on a warm-white measurement surface with carbon evidence fields, registered rules, and compressed sans-serif statements.
+- Memorable moment: a full viewer frame changes inside a fixed instrument while its frame, time, source index, rate, vertex count, and triangle count update beside it.
+- Responsive contract: navigation and wide layouts simplify at 1060px; registers stack and the comparison scrolls natively at 780px; the sequence well and evidence labels tighten at 480px.
 - Unresolved decisions: production domain, analytics policy, and whether feedback should remain in GitHub Discussions.

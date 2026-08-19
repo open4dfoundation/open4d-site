@@ -1,35 +1,49 @@
 ---
 name: Open4D
-description: A measured interface for inspecting 3D data that changes over time.
+description: A versioned repository brief for inspecting 3D data that changes over time.
 colors:
-  utility-iron: "#32373a"
-  carbon: "#171a1c"
-  utility-mist: "#e3e5e2"
   graphite: "#111318"
-  body-ink: "#353b44"
-  muted-ink: "#626665"
-  cool-ground: "#f1f1ed"
+  carbon: "#171a1c"
+  utility-iron: "#32373a"
+  muted-ink: "#5f6362"
   paper: "#fbfbf8"
-  rule: "#cfd1cd"
-  rule-strong: "#999e9c"
-  focus-amber: "#c88927"
-  chart-muted: "#adb1ae"
+  utility-ground: "#efefeb"
+  utility-mist: "#e2e3df"
+  rule: "#c9cbc6"
+  rule-strong: "#8f9491"
+  focus-amber: "#b8791b"
+  translucent-rule: "rgba(255, 255, 255, 0.24)"
+  translucent-rule-strong: "rgba(255, 255, 255, 0.45)"
+  error-violet: "#24114e"
+  error-indigo: "#403ab6"
+  error-blue: "#2e8bcb"
+  error-teal: "#35b889"
+  error-green: "#9dc642"
+  error-yellow: "#e2bd32"
+  error-orange: "#e26b27"
+  error-red: "#9f1f17"
 typography:
   display:
     fontFamily: "Archivo Variable, Arial, sans-serif"
-    fontSize: "clamp(3.25rem, 7vw, 6rem)"
+    fontSize: "clamp(3.25rem, 7.1vw, 6rem)"
     fontWeight: 730
     lineHeight: 0.94
     letterSpacing: "-0.04em"
   headline:
     fontFamily: "Archivo Variable, Arial, sans-serif"
-    fontSize: "clamp(2.35rem, 4.5vw, 4.5rem)"
+    fontSize: "clamp(2.35rem, 4.4vw, 4.35rem)"
     fontWeight: 730
     lineHeight: 1
     letterSpacing: "-0.035em"
+  title:
+    fontFamily: "Archivo Variable, Arial, sans-serif"
+    fontSize: "clamp(1.55rem, 2.7vw, 2.65rem)"
+    fontWeight: 730
+    lineHeight: 1.08
+    letterSpacing: "-0.028em"
   body:
     fontFamily: "Archivo Variable, Arial, sans-serif"
-    fontSize: "1.08rem"
+    fontSize: "1.05rem"
     fontWeight: 400
     lineHeight: 1.62
     letterSpacing: "normal"
@@ -38,16 +52,14 @@ typography:
     fontSize: "0.78rem"
     fontWeight: 400
     lineHeight: 1.4
-    letterSpacing: "0.06em"
+    letterSpacing: "0.05em"
 rounded:
-  status: "4px"
-  control: "5px"
-  tabs: "7px"
+  status: "3px"
+  control: "4px"
 spacing:
-  xxs: "4px"
   xs: "8px"
-  sm: "12px"
-  md: "18px"
+  sm: "14px"
+  md: "20px"
   lg: "28px"
   xl: "48px"
 components:
@@ -56,65 +68,72 @@ components:
     textColor: "{colors.paper}"
     typography: "{typography.body}"
     rounded: "{rounded.control}"
-    padding: "0 20px"
-    height: "52px"
+    padding: "0 19px"
+    height: "50px"
   button-inverse:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.carbon}"
     typography: "{typography.body}"
     rounded: "{rounded.control}"
-    padding: "0 20px"
-    height: "52px"
-  evidence-panel:
-    backgroundColor: "{colors.paper}"
+    padding: "0 19px"
+    height: "50px"
+  status-label:
+    backgroundColor: "transparent"
     textColor: "{colors.graphite}"
-    rounded: "{rounded.control}"
-    padding: "18px"
+    typography: "{typography.label}"
+    rounded: "{rounded.status}"
+    padding: "4px 7px"
 ---
 
 # Design System: Open4D
 
 ## Overview
 
-**Creative North Star: "The Evidence Bench"**
+**Creative North Star: "The Versioned Repository Brief"**
 
-Open4D looks like a clean place to inspect work in progress. Large plain statements establish the question, then real frames, controls, measurements, and limitations carry the argument. The interface is bright, technical, and confident without trying to imitate a command line or a science-fiction display.
+Open4D reads like a dated technical brief that can be checked against the repository. A release line establishes version and recency; large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display.
 
-The system stays visually flat and uses scale, rules, and full-width carbon fields to separate modes. It rejects glossy startup decoration, unsupported product imagery, and feature-card catalogues. Real project output is the primary visual material.
+The page stays flat and near-monochrome. Scale, long rules, table-like registers, and full-width carbon or iron fields create hierarchy. Real project output is the visual material, while limitations remain attached to the result they qualify.
 
 **Key Characteristics:**
 
-- Real changing-3D output appears before architecture or ambition.
-- Large compressed headings sit against small, measured supporting copy.
-- Iron and carbon own actions and whole evidence fields; they are not scattered as decoration.
-- Fine rules register rows, frames, and status without turning them into cards.
-- Limitations travel with results.
+- A version and update date frame the site as a repository brief rather than a timeless campaign.
+- One fixed, selectable frame instrument shows real changing-3D output before architecture or ambition.
+- Task-oriented registers expose repository breadth without turning it into a feature-card grid.
+- Equal research records keep codecs, reconstruction, and reproducibility work at the same visual level.
+- Compact scope language states what works now without letting maturity messaging dominate the page.
 
 ## Colors
 
-The palette is a warm-white work surface with graphite type, precise steel rules, and carbon used at structural moments. Source media keeps its scientific colors.
+The interface is deliberately monochrome: graphite, iron, paper, and rules organize the experience so source imagery and measured error retain their scientific meaning.
 
 ### Primary
 
-- **Utility Iron:** Used for primary actions, active measurements, and the closing response field.
-- **Carbon:** Used when white text and real media need a quiet, high-contrast ground.
-- **Utility Mist:** Used for selection and low-emphasis interface context.
+- **Utility Iron:** Primary actions, selected frame controls, and the closing workflow-response field.
+- **Carbon:** Whole comparison fields and the darkest contextual surfaces.
+- **Utility Mist:** Selection, limitation notes, and quiet hover feedback.
+
+### Tertiary
+
+- **Focus Amber:** Keyboard focus only. It exists for accessibility, not brand decoration.
+- **Error Violet through Error Red:** A fixed eight-step scientific scale used only for decoded-to-source distance in the comparison key and corresponding source evidence.
 
 ### Neutral
 
-- **Graphite:** Main text and hard technical contrast.
-- **Body Ink:** Long-form introductory copy.
-- **Muted Ink:** Explanations, captions, and limitations.
-- **Cool Ground:** The continuous page surface.
-- **Paper:** Media controls, charts, status registers, and inverse actions.
-- **Rule / Strong Rule:** Registration lines and container edges; strong rules mark larger boundaries.
-- **Chart Muted:** The before-state and secondary benchmark bars.
+- **Graphite:** Main text and hard contrast.
+- **Muted Ink:** Explanations, captions, metadata, and limitations.
+- **Utility Ground:** The continuous warm-gray page surface.
+- **Paper:** Instrument panels, mobile navigation, and the two status-overview panes.
+- **Rule / Strong Rule:** Row registration and major boundaries.
+- **Translucent Rule / Strong Translucent Rule:** Dividers and borders over carbon or iron fields only.
 
 ### Named Rules
 
-**The Dark Field Has a Job Rule.** Iron or carbon marks an action, an active measurement, or a whole change of context; neither is used as decoration.
+**The Monochrome Interface Rule.** Interface controls, type, surfaces, and state remain neutral; saturated hues are not brand accents.
 
-**The Evidence Before Claim Rule.** A measured result and its source treatment must appear before broader statements about capability.
+**The Scientific Color Is Data Rule.** Violet, indigo, blue, teal, green, yellow, orange, and red appear only as the ordered error scale or inside source imagery that already encodes measurements.
+
+**The Translucency Is a Rule Rule.** Semi-transparent white is reserved for one-pixel dividers and media borders on dark fields; it is never a glass surface, overlay material, or decorative wash.
 
 ## Typography
 
@@ -122,29 +141,33 @@ The palette is a warm-white work surface with graphite type, precise steel rules
 **Body Font:** Archivo Variable (with Arial and sans-serif fallbacks)  
 **Label/Mono Font:** Source Code Pro Variable (with monospace fallback)
 
-**Character:** Archivo provides broad, blunt technical headlines without the anonymous feel of a system face. Source Code Pro is reserved for timestamps, values, and compact machine-readable labels.
+**Character:** Archivo supplies broad, blunt technical statements and compact readable prose. Source Code Pro is reserved for version lines, timestamps, measurements, frame readouts, status metadata, and table headers.
 
 ### Hierarchy
 
-- **Display:** Heavy, tightly spaced, and compressed vertically. Use for one page-level statement only.
-- **Headline:** Heavy and balanced across one to three lines. Use for section arguments, not labels.
-- **Title:** Medium-large, weighty text for research records and task names.
-- **Body:** Regular weight with generous line height and a practical maximum near 66 characters.
-- **Label:** Small mono or compact sans text for time, measurements, state, and chart annotation.
+- **Display:** Heavy, tightly spaced, and vertically compressed. Use for one page-level statement.
+- **Headline:** Heavy and balanced across one to three lines. Use for section arguments and interior-page headings.
+- **Title:** Dense but readable. Use for research-record titles and signature-instrument headings.
+- **Body:** Regular weight with generous line height and practical measures near 53–68 characters.
+- **Label:** Small mono text, frequently uppercase, for version, frame, measurement, state, and source labels.
 
 ### Named Rules
 
-**The Plain Sentence Rule.** Headlines state the task, result, or limitation in ordinary language; do not turn category terms into slogans.
+**The Plain Sentence Rule.** Headlines state the task, result, or limitation in ordinary language; category terms do not become slogans.
+
+**The Mono Means Measured Rule.** Monospace type signals a value, index, version, timestamp, state, or table coordinate—not a decorative technical mood.
 
 ## Layout
 
-Pages use a centered shell capped at 1460px with 24px outer gutters on wide screens and 14px gutters below 760px. Major sections breathe vertically, while evidence inside a section is compact and ruled. Split headings place the argument on the left and the explanation on the right; below 1000px they become a single column.
+Pages use a centered shell capped at 1420px. Wide screens have 24px side gutters; screens at 780px and below use 14px. Major sections breathe vertically, while evidence within a section is compact and registered by horizontal rules.
 
-The signature rhythm is statement, artifact, caption, and status. Dense evidence is aligned in two-column or tabular structures above 760px and becomes a deliberate reading order on small screens. The five-frame strip stays horizontally swipeable on phones so temporal adjacency remains visible.
+At 1060px, the desktop navigation becomes a square menu control, hero and interior headings stack, the comparison introduction reflows, and wide work records simplify. At 780px, evidence tables become labeled vertical records, the sequence instrument becomes one column, comparison evidence deliberately extends edge-to-edge, and its 760px canvas scrolls horizontally inside a keyboard-focusable native overflow region. At 480px, the frame well adopts the source aspect ratio, panel padding tightens, and the comparison facts and error-key labels simplify.
+
+The signature rhythm is release line, statement, artifact, register, and source. Repository and status information stays tabular on wide screens and becomes a deliberate labeled reading order on small screens. Media reserves its final aspect ratio before loading.
 
 ## Elevation & Depth
 
-The system uses no box shadows. Depth comes from full-surface carbon changes, paper panels on the warm-gray ground, stronger outer rules, and the literal depth visible in project media.
+The system uses no box shadows, backdrop blur, glass, or simulated elevation. Depth comes from a full-surface change to carbon or iron, white instrument panes on the warm ground, stronger outer rules, and the literal depth contained in project imagery.
 
 ### Named Rules
 
@@ -152,52 +175,65 @@ The system uses no box shadows. Depth comes from full-surface carbon changes, pa
 
 ## Shapes
 
-Corners are restrained and functional: 4px for compact status labels, 5px for controls and framed evidence, and 7px for grouped tabs. Most layout divisions remain square and ruled. Circles are limited to status dots, data marks, and native icon geometry.
+Corners are restrained and functional. Primary controls use gently softened 4px corners; compact scope and status labels use 3px. Instruments, tables, research records, comparison figures, and major panels remain square and ruled. Circles are limited to status bullets and native icon geometry.
+
+The low-radius system is intentional. Repeated containers must not become rounded cards, and responsive stacks retain the same registered edges as their wide-screen forms.
 
 ## Components
 
 ### Buttons
 
-- **Shape:** A compact rectangular control with gently softened 5px corners and a 52px minimum height.
-- **Primary:** Utility Iron with white text, medium-heavy type, and an external-link arrow when it leaves the site.
-- **Inverse:** Paper on a carbon or iron field with Carbon text.
-- **Hover / Focus:** Hover darkens or lifts by 2px; keyboard focus uses a visible amber 3px outline. Reduced-motion preference removes the lift.
-
-### Cards / Containers
-
-- **Corner Style:** Flat or gently softened at 5px only when the object behaves as one instrument.
-- **Background:** Paper for controls and evidence; Cool Ground for the page; carbon for a whole contextual shift.
-- **Shadow Strategy:** None.
-- **Border:** A one-pixel Rule or Strong Rule provides registration.
-- **Internal Padding:** Usually 18px for instrument panels and 30px to 70px for large status panes.
+- **Shape:** Compact rectangular controls with 4px corners and a 50px minimum height.
+- **Primary:** Utility Iron with white text, 19px horizontal padding, and an external-link arrow when it leaves the site.
+- **Inverse:** White on an iron field with Carbon text.
+- **Hover / Focus:** Hover darkens and lifts 2px over 180ms; keyboard focus uses a visible 3px amber outline. Reduced-motion preference effectively removes transitions.
 
 ### Navigation
 
-The sticky navigation is plain text on the Cool Ground. Active routes receive a thin iron underline. At 1000px it becomes a single outlined menu button and a full-width ruled menu; it does not turn into a floating overlay card.
+The sticky header is a translucent Utility Ground strip with a one-pixel rule. Desktop links receive a 2px iron underline on hover or active state. At 1060px the navigation becomes a 42px square outlined menu control and a full-width ruled Paper menu; it does not become a floating overlay card.
 
 ### Sequence Stage
 
-Five real frames share one ruled viewport with timestamp labels, a continuous progress track, playback controls, and source measurements. On phones, each frame occupies 72% of the viewport so the next frame remains visible as a swipe cue. The full viewer replaces the contact sheet only after the visitor asks it to play.
+One complete viewer frame sits in a fixed dark well beside a Paper information panel. Five buttons select sampled frames without changing the container dimensions. The selected frame, time, source index, rate, vertex count, and triangle count update together; images always use `object-fit: contain`. Frame changes use a 220ms clipped fade and become immediate when reduced motion is requested.
 
-### Evidence Rows and Status Registers
+### Repository and Status Registers
 
-Research records use ruled rows with the result in the larger column and the limitation beside it. Status panels use two equal paper columns when space permits and a linear register on phones. Labels remain factual: available, being built, verified partial, working isolated, or release blocked.
+The repository register maps user tasks to scope, implementation detail, and evidence. The status register uses the same ruled row grammar for area, state, evidence, and next work. Column headers use measured labels; at 780px each cell gains its own visible label and records stack linearly.
+
+### Comparison Figure
+
+The comparison is a static aligned still inside a native horizontally scrollable viewport. The figure keeps a 1400:444 aspect ratio, and its eight-step error key is page-native text and color so labels cannot be cropped from the source image. The evidence has one stable view and no animated mode switch.
+
+### Research Records
+
+Research stories are equal ruled records with identifier, question or result, local limitation, and source link. The homepage does not promote one project into a special card. The Work route may attach evidence specific to a record, including a measurement table, without changing the register hierarchy.
+
+### Benchmark Table
+
+The V-DMC measurement is a plain ruled table with baseline and parallel-revision columns, followed by one validation row. Values use Source Code Pro. It is intentionally not a bar chart: exact time, memory, and validation outcomes matter more than visual magnitude.
+
+### Current Scope
+
+Current scope is one compact ruled row pairing a short usable-now statement with a status link. It is not a repeated maturity panel and should remain subordinate to the repository map and research evidence.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** keep the interface monochrome so source media and measured data retain their own meaning.
-- **Do** put a real frame, result, or measurement next to every capability statement.
-- **Do** use full-width carbon fields when the page changes from explanation to comparison or response.
-- **Do** preserve wide gutters, long rules, and clear reading order before adding another container.
+- **Do** define the page as a versioned repository brief with visible version and recency.
+- **Do** make “Describe your workflow” the primary action and “Browse the repository” the secondary action.
+- **Do** put a real frame, result, measurement, or repository location next to capability statements.
+- **Do** keep the interface monochrome so source media and measured error retain meaning.
+- **Do** preserve native horizontal scrolling for the comparison on narrow screens.
 - **Do** keep limitations visually adjacent to the result they qualify.
-- **Do** use motion for state changes, playback, and entry sequencing, with reduced-motion support.
+- **Do** honor reduced-motion preferences for navigation and frame replacement.
 
 ### Don't:
 
 - **Don't** invent uploads, dashboards, APIs, format support, or roadmap states that the repository does not verify.
-- **Don't** add gradients, glow, glass, floating blobs, or generic 3D decoration.
-- **Don't** organize the marketing page as a repeated grid of rounded feature cards.
-- **Don't** introduce a saturated brand accent; interface hierarchy comes from value, scale, and rules.
-- **Don't** hide unfinished work behind aspirational language.
+- **Don't** add alternate modes, autoplay, or animated resizing to the fixed sequence or comparison evidence.
+- **Don't** turn the three-row benchmark evidence into a decorative graphic.
+- **Don't** add gradients, glow, glass, floating blobs, shadows, or generic 3D decoration.
+- **Don't** organize the site as a repeated grid of rounded feature cards.
+- **Don't** promote scientific error colors into interface accents.
+- **Don't** hide unfinished work behind aspirational language or duplicate it across large maturity sections.

@@ -68,10 +68,10 @@ export function StatusPage() {
           </div>
           {statusDetails.map((item) => (
             <div className="status-table__row" role="row" key={item.area}>
-              <strong role="cell">{item.area}</strong>
-              <span role="cell" className="status-label">{item.state}</span>
-              <p role="cell">{item.evidence}</p>
-              <p role="cell">{item.next}</p>
+              <strong role="cell" data-label="Area">{item.area}</strong>
+              <span role="cell" data-label="State" className="status-label">{item.state}</span>
+              <p role="cell" data-label="Evidence">{item.evidence}</p>
+              <p role="cell" data-label="Next work">{item.next}</p>
             </div>
           ))}
         </div>

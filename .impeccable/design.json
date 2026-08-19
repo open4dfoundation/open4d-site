@@ -1,37 +1,47 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-19T18:07:17Z",
+  "generatedAt": "2026-08-19T20:00:00Z",
   "title": "Design System: Open4D",
   "extensions": {
     "colorMeta": {
-      "utility-iron": { "role": "primary", "displayName": "Utility Iron", "canonical": "#32373a", "tonalRamp": ["#101213", "#171a1c", "#25292c", "#32373a", "#596063", "#858b8d", "#bcc0bf", "#eceeeb"] },
-      "carbon": { "role": "primary", "displayName": "Carbon", "canonical": "#171a1c", "tonalRamp": ["#0d0f10", "#171a1c", "#292d2f", "#454a4c", "#6c7273", "#9ca1a0", "#d1d3d0", "#f2f2ee"] },
-      "utility-mist": { "role": "primary", "displayName": "Utility Mist", "canonical": "#e3e5e2", "tonalRamp": ["#121415", "#25292a", "#424748", "#676c6c", "#939896", "#bdc1be", "#e3e5e2", "#f7f7f3"] },
       "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#111318", "tonalRamp": ["#111318", "#242932", "#3d444e", "#616873", "#8a929e", "#b6bec8", "#e0e4e9", "#f7f8fa"] },
-      "body-ink": { "role": "neutral", "displayName": "Body Ink", "canonical": "#353b44", "tonalRamp": ["#111318", "#242932", "#353b44", "#59616d", "#858e9a", "#b4bbc5", "#dfe3e8", "#f7f8fa"] },
-      "muted-ink": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#626665", "tonalRamp": ["#151717", "#2b2e2d", "#464a49", "#626665", "#8c908e", "#b6b9b6", "#dedfdb", "#f6f6f2"] },
-      "cool-ground": { "role": "neutral", "displayName": "Warm Utility Ground", "canonical": "#f1f1ed", "tonalRamp": ["#161716", "#30312f", "#50524f", "#757873", "#a1a39d", "#cbccc6", "#e8e8e3", "#f1f1ed"] },
+      "carbon": { "role": "primary", "displayName": "Carbon", "canonical": "#171a1c", "tonalRamp": ["#0d0f10", "#171a1c", "#292d2f", "#454a4c", "#6c7273", "#9ca1a0", "#d1d3d0", "#f2f2ee"] },
+      "utility-iron": { "role": "primary", "displayName": "Utility Iron", "canonical": "#32373a", "tonalRamp": ["#101213", "#171a1c", "#25292c", "#32373a", "#596063", "#858b8d", "#bcc0bf", "#eceeeb"] },
+      "muted-ink": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#5f6362", "tonalRamp": ["#151717", "#2b2e2d", "#464a49", "#5f6362", "#8c908e", "#b6b9b6", "#dedfdb", "#f6f6f2"] },
       "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#fbfbf8", "tonalRamp": ["#171817", "#323330", "#535450", "#797a75", "#a5a69f", "#d0d0c9", "#ecece7", "#fbfbf8"] },
-      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#cfd1cd", "tonalRamp": ["#171918", "#313432", "#525653", "#787d79", "#a3a7a3", "#cfd1cd", "#e8e9e5", "#f8f8f5"] },
-      "rule-strong": { "role": "neutral", "displayName": "Strong Rule", "canonical": "#999e9c", "tonalRamp": ["#151716", "#2e3230", "#4e5451", "#747a77", "#999e9c", "#c0c4c1", "#e0e2de", "#f6f7f3"] },
-      "focus-amber": { "role": "tertiary", "displayName": "Focus Amber", "canonical": "#c88927", "tonalRamp": ["#2d1d08", "#563913", "#805817", "#a97420", "#c88927", "#dda957", "#efce99", "#faf0dd"] },
-      "chart-muted": { "role": "neutral", "displayName": "Chart Muted", "canonical": "#adb1ae", "tonalRamp": ["#151716", "#303330", "#515652", "#787d79", "#adb1ae", "#cacdca", "#e5e7e3", "#f7f8f4"] }
+      "utility-ground": { "role": "neutral", "displayName": "Utility Ground", "canonical": "#efefeb", "tonalRamp": ["#161716", "#30312f", "#50524f", "#757873", "#a1a39d", "#cbccc6", "#e8e8e3", "#efefeb"] },
+      "utility-mist": { "role": "neutral", "displayName": "Utility Mist", "canonical": "#e2e3df", "tonalRamp": ["#121415", "#25292a", "#424748", "#676c6c", "#939896", "#bdc1be", "#e2e3df", "#f7f7f3"] },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#c9cbc6", "tonalRamp": ["#171918", "#313432", "#525653", "#787d79", "#a3a7a3", "#c9cbc6", "#e8e9e5", "#f8f8f5"] },
+      "rule-strong": { "role": "neutral", "displayName": "Strong Rule", "canonical": "#8f9491", "tonalRamp": ["#151716", "#2e3230", "#4e5451", "#747a77", "#8f9491", "#c0c4c1", "#e0e2de", "#f6f7f3"] },
+      "focus-amber": { "role": "tertiary", "displayName": "Focus Amber", "canonical": "#b8791b", "tonalRamp": ["#2d1d08", "#563913", "#805817", "#9f6718", "#b8791b", "#d7a44f", "#edcc95", "#faf0dd"] },
+      "translucent-rule": { "role": "neutral", "displayName": "Dark-field Rule", "canonical": "rgba(255, 255, 255, 0.24)", "tonalRamp": ["rgba(255,255,255,0.08)", "rgba(255,255,255,0.12)", "rgba(255,255,255,0.18)", "rgba(255,255,255,0.24)", "rgba(255,255,255,0.32)", "rgba(255,255,255,0.45)", "rgba(255,255,255,0.62)", "rgba(255,255,255,0.82)"] },
+      "translucent-rule-strong": { "role": "neutral", "displayName": "Strong Dark-field Rule", "canonical": "rgba(255, 255, 255, 0.45)", "tonalRamp": ["rgba(255,255,255,0.08)", "rgba(255,255,255,0.14)", "rgba(255,255,255,0.24)", "rgba(255,255,255,0.32)", "rgba(255,255,255,0.45)", "rgba(255,255,255,0.58)", "rgba(255,255,255,0.72)", "rgba(255,255,255,0.88)"] },
+      "error-violet": { "role": "tertiary", "displayName": "Error 01 Violet", "canonical": "#24114e", "tonalRamp": ["#16092f", "#24114e", "#38206c", "#533d84", "#75639f", "#9e91bd", "#ccc4dd", "#f2eff7"] },
+      "error-indigo": { "role": "tertiary", "displayName": "Error 02 Indigo", "canonical": "#403ab6", "tonalRamp": ["#17143f", "#27236d", "#403ab6", "#615bd0", "#8580df", "#aaa7ea", "#d2d0f4", "#f2f1fb"] },
+      "error-blue": { "role": "tertiary", "displayName": "Error 03 Blue", "canonical": "#2e8bcb", "tonalRamp": ["#0d2a3e", "#174865", "#206a94", "#2e8bcb", "#60a9dc", "#91c7e9", "#c4e3f3", "#edf7fc"] },
+      "error-teal": { "role": "tertiary", "displayName": "Error 04 Teal", "canonical": "#35b889", "tonalRamp": ["#0d382b", "#175c46", "#238564", "#35b889", "#67cea8", "#97dfc5", "#c8efe0", "#effaf6"] },
+      "error-green": { "role": "tertiary", "displayName": "Error 05 Green", "canonical": "#9dc642", "tonalRamp": ["#29370c", "#485d17", "#708b28", "#9dc642", "#b9d56d", "#d1e59b", "#e6f1c7", "#f7fbe9"] },
+      "error-yellow": { "role": "tertiary", "displayName": "Error 06 Yellow", "canonical": "#e2bd32", "tonalRamp": ["#423508", "#715b0f", "#a88b1d", "#e2bd32", "#eace61", "#f0dc91", "#f6ebc0", "#fcf8e8"] },
+      "error-orange": { "role": "tertiary", "displayName": "Error 07 Orange", "canonical": "#e26b27", "tonalRamp": ["#401b08", "#702f0d", "#a84a18", "#e26b27", "#ec925a", "#f2b78d", "#f8d8bd", "#fdf2e9"] },
+      "error-red": { "role": "tertiary", "displayName": "Error 08 Red", "canonical": "#9f1f17", "tonalRamp": ["#330906", "#5b100c", "#811813", "#9f1f17", "#c34a40", "#dc8178", "#edb8b2", "#faecea"] }
     },
     "typographyMeta": {
       "display": { "displayName": "Display", "purpose": "One blunt page-level statement." },
-      "headline": { "displayName": "Headline", "purpose": "Section arguments and major results." },
+      "headline": { "displayName": "Headline", "purpose": "Section arguments and interior-page headings." },
+      "title": { "displayName": "Title", "purpose": "Research records and instrument headings." },
       "body": { "displayName": "Body", "purpose": "Explanations, evidence, and limitations." },
-      "label": { "displayName": "Measured Label", "purpose": "Timestamps, chart values, state, and source metadata." }
+      "label": { "displayName": "Measured Label", "purpose": "Versions, timestamps, values, states, and table coordinates." }
     },
     "shadows": [],
     "motion": [
-      { "name": "state", "value": "180ms ease", "purpose": "Hover, color, and underline state changes." },
-      { "name": "reveal", "value": "600ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Registered frame entry and major content reveals." },
-      { "name": "media-replace", "value": "420ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Replace the contact sheet with the playing viewer." }
+      { "name": "state", "value": "180ms ease", "purpose": "Hover, color, transform, and underline state changes." },
+      { "name": "frame-replace", "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Clipped fade between selected sequence frames." },
+      { "name": "mobile-menu", "value": "260ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Reveal and dismiss the full-width mobile navigation." }
     ],
     "breakpoints": [
-      { "name": "navigation", "value": "1000px" },
-      { "name": "compact", "value": "760px" }
+      { "name": "navigation-and-wide-layout", "value": "1060px" },
+      { "name": "stacked-records", "value": "780px" },
+      { "name": "small-instrument", "value": "480px" }
     ]
   },
   "components": [
@@ -39,86 +49,104 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The main action on a neutral surface.",
-      "html": "<button class=\"ds-button-primary\">Tell us what breaks <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
-      "css": ".ds-button-primary{min-height:52px;display:inline-flex;align-items:center;gap:12px;padding:0 20px;border:0;border-radius:5px;background:var(--accent,#32373a);color:#fff;font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-primary svg{width:18px;fill:none;stroke:currentColor;stroke-width:2}.ds-button-primary:hover{background:var(--accent-strong,#171a1c);transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+      "description": "The primary workflow action on a neutral surface.",
+      "html": "<button class=\"ds-button-primary\">Describe your workflow <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-button-primary{min-height:50px;display:inline-flex;align-items:center;gap:11px;padding:0 19px;border:0;border-radius:4px;background:#32373a;color:#fff;font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-primary svg{width:17px;fill:none;stroke:currentColor;stroke-width:2}.ds-button-primary:hover{background:#171a1c;transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
       "name": "Inverse Button",
       "kind": "button",
       "refersTo": "button-inverse",
-      "description": "The response action on a carbon field.",
-      "html": "<button class=\"ds-button-inverse\">Answer on GitHub</button>",
-      "css": ".ds-button-inverse{min-height:52px;padding:0 20px;border:0;border-radius:5px;background:#fbfbf8;color:var(--accent-strong,#171a1c);font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-inverse:hover{background:#eceeeb;transform:translateY(-2px)}.ds-button-inverse:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+      "description": "The primary workflow action on the iron closing field.",
+      "html": "<button class=\"ds-button-inverse\">Describe your workflow</button>",
+      "css": ".ds-button-inverse{min-height:50px;padding:0 19px;border:0;border-radius:4px;background:#fff;color:#171a1c;font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-inverse:hover{background:#e8e9e5;transform:translateY(-2px)}.ds-button-inverse:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
       "name": "Text Link",
       "kind": "custom",
-      "description": "A quiet path to source evidence or deeper records.",
-      "html": "<a class=\"ds-text-link\" href=\"#\">Read the test record</a>",
-      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:10px;color:var(--accent-strong,#171a1c);font:630 16px/1.4 'Archivo Variable',Arial,sans-serif;text-decoration-thickness:1px;text-underline-offset:5px}.ds-text-link:hover{color:var(--accent,#32373a)}.ds-text-link:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+      "description": "The secondary path to repository source or deeper evidence.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Browse the repository</a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:9px;color:#171a1c;font:630 16px/1.4 'Archivo Variable',Arial,sans-serif;text-decoration-thickness:1px;text-underline-offset:5px}.ds-text-link:hover{color:#4e5452}.ds-text-link:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
       "name": "Primary Navigation",
       "kind": "nav",
-      "description": "Plain text navigation with one measured active mark.",
-      "html": "<nav class=\"ds-nav\"><strong>Open<span>4D</span></strong><div><a class=\"active\" href=\"#\">Examples</a><a href=\"#\">Work</a><a href=\"#\">Status</a></div></nav>",
-      "css": ".ds-nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line,#cfd1cd);color:var(--ink,#111318);font-family:'Archivo Variable',Arial,sans-serif}.ds-nav strong{font-size:24px;letter-spacing:-.035em}.ds-nav strong span{color:var(--accent,#32373a)}.ds-nav div{display:flex;gap:30px}.ds-nav a{position:relative;color:inherit;text-decoration:none;font-weight:570}.ds-nav a.active:after,.ds-nav a:hover:after{content:'';position:absolute;right:0;bottom:-8px;left:0;height:2px;background:var(--accent,#32373a)}.ds-nav a:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+      "description": "Sticky plain-text navigation with a measured active underline.",
+      "html": "<nav class=\"ds-nav\"><strong>Open<span>4D</span></strong><div><a class=\"active\" href=\"#\">Repository map</a><a href=\"#\">Research</a><a href=\"#\">Status</a></div></nav>",
+      "css": ".ds-nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #c9cbc6;background:rgba(239,239,235,.96);color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-nav strong{font-size:24px;letter-spacing:-.035em}.ds-nav strong span{color:#32373a}.ds-nav div{display:flex;gap:30px}.ds-nav a{position:relative;color:inherit;text-decoration:none;font-weight:590}.ds-nav a.active:after,.ds-nav a:hover:after{content:'';position:absolute;right:0;bottom:-7px;left:0;height:2px;background:#32373a}.ds-nav a:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
-      "name": "Comparison Tabs",
-      "kind": "custom",
-      "description": "A compact view switch used only inside the comparison field.",
-      "html": "<div class=\"ds-tabs\"><button class=\"active\">Playback</button><button>What it measures</button></div>",
-      "css": ".ds-tabs{display:inline-flex;gap:4px;padding:4px;border:1px solid rgba(255,255,255,.42);border-radius:7px;background:var(--accent-strong,#171a1c)}.ds-tabs button{padding:10px 15px;border:0;border-radius:4px;background:transparent;color:#e2e4e1;font-family:'Archivo Variable',Arial,sans-serif}.ds-tabs button.active{background:#fbfbf8;color:var(--accent-strong,#171a1c)}.ds-tabs button:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:2px}"
+      "name": "Scope Label",
+      "kind": "chip",
+      "refersTo": "status-label",
+      "description": "A compact factual state or implementation-scope label.",
+      "html": "<span class=\"ds-scope-label\">Verified partial</span>",
+      "css": ".ds-scope-label{display:inline-block;width:max-content;padding:4px 7px;border:1px solid #8f9491;border-radius:3px;background:transparent;color:#111318;font:620 12px/1.4 'Archivo Variable',Arial,sans-serif}.ds-scope-label:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
       "name": "Sequence Stage",
       "kind": "custom",
-      "refersTo": "evidence-panel",
-      "description": "The signature registered-frame instrument.",
-      "html": "<div class=\"ds-stage\"><div class=\"ds-frames\"><span>t = 0.0 s</span><span>t = 0.2 s</span><span>t = 0.4 s</span><span>t = 0.6 s</span><span>t = 0.9 s</span></div><div class=\"ds-controls\">Play sequence <i></i><code>0.0 / 0.9 s</code></div></div>",
-      "css": ".ds-stage{overflow:hidden;border:1px solid var(--line-strong,#999e9c);border-radius:5px;background:#fbfbf8;color:var(--ink,#111318);font-family:'Archivo Variable',Arial,sans-serif}.ds-frames{height:180px;display:grid;grid-template-columns:repeat(5,1fr);background:#d8dad7}.ds-frames span{padding:12px;border-right:1px solid var(--line-strong,#999e9c);font:12px 'Source Code Pro Variable',monospace}.ds-controls{min-height:62px;display:flex;align-items:center;gap:20px;padding:0 18px;border-top:1px solid var(--line-strong,#999e9c);font-weight:650}.ds-controls i{position:relative;height:3px;flex:1;background:#c7cac7}.ds-controls i:before{content:'';display:block;width:30%;height:100%;background:var(--accent,#32373a)}.ds-controls code{font-size:12px;color:#48505b}"
+      "description": "The fixed selectable frame instrument with measured readouts.",
+      "html": "<div class=\"ds-stage\"><div class=\"ds-stage-image\">FRAME 05</div><section><small>WORKING EXAMPLE</small><h3>Inspect a mesh sequence one frame at a time.</h3><div class=\"ds-frame-buttons\"><button>01</button><button class=\"active\">05</button><button>10</button></div></section></div>",
+      "css": ".ds-stage{display:grid;grid-template-columns:.68fr 1fr;border:1px solid #8f9491;background:#fbfbf8;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-stage-image{min-height:240px;display:grid;place-items:center;background:#222629;color:#fbfbf8;font:13px 'Source Code Pro Variable',monospace}.ds-stage section{padding:28px;border-left:1px solid #8f9491}.ds-stage small{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;letter-spacing:.05em}.ds-stage h3{font-size:28px;line-height:1;letter-spacing:-.035em}.ds-frame-buttons{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #8f9491}.ds-frame-buttons button{min-height:54px;border:0;border-right:1px solid #c9cbc6;background:transparent}.ds-frame-buttons button:last-child{border-right:0}.ds-frame-buttons button:hover{background:#e2e3df}.ds-frame-buttons button.active{background:#32373a;color:#fff}.ds-frame-buttons button:focus-visible{outline:3px solid #b8791b;outline-offset:2px}"
     },
     {
-      "name": "Status Register",
-      "kind": "card",
-      "refersTo": "evidence-panel",
-      "description": "Two ruled columns for verified and unfinished work.",
-      "html": "<div class=\"ds-status\"><section><h3>Available now</h3><p>Sequence playback and frame inspection</p></section><section><h3>Still being built</h3><p>Stable shared I/O API</p></section></div>",
-      "css": ".ds-status{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--line-strong,#9ca5b2);background:var(--line-strong,#9ca5b2);color:var(--ink,#111318);font-family:'Archivo Variable',Arial,sans-serif}.ds-status section{padding:30px;background:#fff}.ds-status h3{margin:0 0 28px;font-size:24px;letter-spacing:-.025em}.ds-status p{margin:0;padding:16px 0;border-bottom:1px solid var(--line,#cfd5dd);color:#3d444e}"
+      "name": "Repository Register",
+      "kind": "custom",
+      "description": "A task-oriented ruled register for repository scope and evidence.",
+      "html": "<div class=\"ds-register\"><header><span>Task</span><span>Where it lives</span><span>Evidence</span></header><div><strong>Load and inspect</strong><span>Shared tools</span><span>Viewer example</span></div><div><strong>Compress</strong><span>Research projects</span><span>Codec records</span></div></div>",
+      "css": ".ds-register{border-top:1px solid #8f9491;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-register header,.ds-register>div{display:grid;grid-template-columns:.8fr .7fr 1fr;gap:28px;padding:20px 0;border-bottom:1px solid #c9cbc6}.ds-register header{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;letter-spacing:.05em;text-transform:uppercase}.ds-register>div span{color:#5f6362}"
+    },
+    {
+      "name": "Error Key",
+      "kind": "custom",
+      "description": "The only saturated interface element: an ordered scientific distance scale.",
+      "html": "<div class=\"ds-error-key\"><div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p><span>0.0%</span><span>decoded-to-source distance</span><span>1.5%</span></p></div>",
+      "css": ".ds-error-key{padding:16px;background:#171a1c;color:#e2e4e1;font:12px 'Source Code Pro Variable',monospace}.ds-error-key>div{display:grid;grid-template-columns:repeat(8,1fr);height:10px}.ds-error-key i:nth-child(1){background:#24114e}.ds-error-key i:nth-child(2){background:#403ab6}.ds-error-key i:nth-child(3){background:#2e8bcb}.ds-error-key i:nth-child(4){background:#35b889}.ds-error-key i:nth-child(5){background:#9dc642}.ds-error-key i:nth-child(6){background:#e2bd32}.ds-error-key i:nth-child(7){background:#e26b27}.ds-error-key i:nth-child(8){background:#9f1f17}.ds-error-key p{display:flex;justify-content:space-between;gap:16px;margin:7px 0 0}"
+    },
+    {
+      "name": "Benchmark Table",
+      "kind": "custom",
+      "description": "A plain table for exact baseline, revision, memory, and validation evidence.",
+      "html": "<div class=\"ds-benchmark\"><div class=\"head\"><span>Measurement</span><span>Baseline</span><span>Parallel revision</span></div><div><strong>Wall time</strong><span>1.978 s</span><span>0.704 s</span></div><div><strong>Peak memory</strong><span>144 MB</span><span>372 MB</span></div></div>",
+      "css": ".ds-benchmark{border-top:1px solid #8f9491;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-benchmark>div{display:grid;grid-template-columns:1fr .7fr .7fr;gap:22px;padding:20px 0;border-bottom:1px solid #c9cbc6}.ds-benchmark .head{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;text-transform:uppercase}.ds-benchmark>div:not(.head) span{font-family:'Source Code Pro Variable',monospace}"
     }
   ],
   "narrative": {
-    "northStar": "The Evidence Bench",
-    "overview": "Open4D looks like a clean place to inspect work in progress. Large plain statements establish the question, then real frames, controls, measurements, and limitations carry the argument. The interface is bright, technical, and confident without trying to imitate a command line or a science-fiction display. The system stays visually flat and uses scale, rules, and full-width carbon fields to separate modes. It rejects glossy startup decoration, unsupported product imagery, and feature-card catalogues. Real project output is the primary visual material.",
+    "northStar": "The Versioned Repository Brief",
+    "overview": "Open4D reads like a dated technical brief that can be checked against the repository. A release line establishes version and recency; large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display. The page stays flat and near-monochrome. Scale, long rules, table-like registers, and full-width carbon or iron fields create hierarchy. Real project output is the visual material, while limitations remain attached to the result they qualify.",
     "keyCharacteristics": [
-      "Real changing-3D output appears before architecture or ambition.",
-      "Large compressed headings sit against small, measured supporting copy.",
-      "Iron and carbon own actions and whole evidence fields; they are not scattered as decoration.",
-      "Fine rules register rows, frames, and status without turning them into cards.",
-      "Limitations travel with results."
+      "A version and update date frame the site as a repository brief rather than a timeless campaign.",
+      "One fixed, selectable frame instrument shows real changing-3D output before architecture or ambition.",
+      "Task-oriented registers expose repository breadth without turning it into a feature-card grid.",
+      "Equal research records keep codecs, reconstruction, and reproducibility work at the same visual level.",
+      "Compact scope language states what works now without letting maturity messaging dominate the page."
     ],
     "rules": [
-      { "name": "The Dark Field Has a Job Rule", "body": "Iron or carbon marks an action, an active measurement, or a whole change of context; neither is used as decoration.", "section": "colors" },
-      { "name": "The Evidence Before Claim Rule", "body": "A measured result and its source treatment must appear before broader statements about capability.", "section": "colors" },
-      { "name": "The Plain Sentence Rule", "body": "Headlines state the task, result, or limitation in ordinary language; do not turn category terms into slogans.", "section": "typography" },
+      { "name": "The Monochrome Interface Rule", "body": "Interface controls, type, surfaces, and state remain neutral; saturated hues are not brand accents.", "section": "colors" },
+      { "name": "The Scientific Color Is Data Rule", "body": "Violet, indigo, blue, teal, green, yellow, orange, and red appear only as the ordered error scale or inside source imagery that already encodes measurements.", "section": "colors" },
+      { "name": "The Translucency Is a Rule Rule", "body": "Semi-transparent white is reserved for one-pixel dividers and media borders on dark fields; it is never a glass surface, overlay material, or decorative wash.", "section": "colors" },
+      { "name": "The Plain Sentence Rule", "body": "Headlines state the task, result, or limitation in ordinary language; category terms do not become slogans.", "section": "typography" },
+      { "name": "The Mono Means Measured Rule", "body": "Monospace type signals a value, index, version, timestamp, state, or table coordinate—not a decorative technical mood.", "section": "typography" },
       { "name": "The Flat by Default Rule", "body": "A surface earns separation through structure and contrast, never through a decorative shadow.", "section": "elevation" }
     ],
     "dos": [
-      "Do put a real frame, result, or measurement next to every capability statement.",
-      "Do keep the interface monochrome so source media and measured data retain their own meaning.",
-      "Do use full-width carbon fields when the page changes from explanation to comparison or response.",
-      "Do preserve wide gutters, long rules, and clear reading order before adding another container.",
+      "Do define the page as a versioned repository brief with visible version and recency.",
+      "Do make ‘Describe your workflow’ the primary action and ‘Browse the repository’ the secondary action.",
+      "Do put a real frame, result, measurement, or repository location next to capability statements.",
+      "Do keep the interface monochrome so source media and measured error retain meaning.",
+      "Do preserve native horizontal scrolling for the comparison on narrow screens.",
       "Do keep limitations visually adjacent to the result they qualify.",
-      "Do use motion for state changes, playback, and entry sequencing, with reduced-motion support."
+      "Do honor reduced-motion preferences for navigation and frame replacement."
     ],
     "donts": [
       "Don't invent uploads, dashboards, APIs, format support, or roadmap states that the repository does not verify.",
-      "Don't add gradients, glow, glass, floating blobs, or generic 3D decoration.",
-      "Don't organize the marketing page as a repeated grid of rounded feature cards.",
-      "Don't introduce a saturated brand accent; interface hierarchy comes from value, scale, and rules.",
-      "Don't hide unfinished work behind aspirational language."
+      "Don't add alternate modes, autoplay, or animated resizing to the fixed sequence or comparison evidence.",
+      "Don't turn the three-row benchmark evidence into a decorative graphic.",
+      "Don't add gradients, glow, glass, floating blobs, shadows, or generic 3D decoration.",
+      "Don't organize the site as a repeated grid of rounded feature cards.",
+      "Don't promote scientific error colors into interface accents.",
+      "Don't hide unfinished work behind aspirational language or duplicate it across large maturity sections."
     ]
   }
 }

@@ -1,153 +1,89 @@
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { Pause, Play, RotateCcw } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const frames = [
-  { src: '/media/frame-01.png', label: '0.0 s' },
-  { src: '/media/frame-02.png', label: '0.2 s' },
-  { src: '/media/frame-03.png', label: '0.4 s' },
-  { src: '/media/frame-04.png', label: '0.6 s' },
-  { src: '/media/frame-05.png', label: '0.9 s' },
+  { src: '/media/frame-01.png', frame: '01', time: '0.0 s', source: '0', vertices: '20,672', triangles: '39,421' },
+  { src: '/media/frame-02.png', frame: '03', time: '0.2 s', source: '2', vertices: '20,686', triangles: '39,292' },
+  { src: '/media/frame-03.png', frame: '05', time: '0.4 s', source: '4', vertices: '20,805', triangles: '39,390' },
+  { src: '/media/frame-04.png', frame: '07', time: '0.6 s', source: '6', vertices: '20,885', triangles: '39,413' },
+  { src: '/media/frame-05.png', frame: '10', time: '0.9 s', source: '9', vertices: '20,999', triangles: '39,356' },
 ]
 
 export function SequenceStage() {
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const [selected, setSelected] = useState(2)
   const reducedMotion = useReducedMotion()
-  const [showVideo, setShowVideo] = useState(false)
-  const [playing, setPlaying] = useState(false)
-  const [progress, setProgress] = useState(0)
+  const active = frames[selected]
 
   useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    const update = () => {
-      setProgress(video.duration ? video.currentTime / video.duration : 0)
-    }
-    const finish = () => setPlaying(false)
-    video.addEventListener('timeupdate', update)
-    video.addEventListener('ended', finish)
-    return () => {
-      video.removeEventListener('timeupdate', update)
-      video.removeEventListener('ended', finish)
-    }
-  }, [showVideo])
-
-  const togglePlayback = async () => {
-    setShowVideo(true)
-    requestAnimationFrame(async () => {
-      const video = videoRef.current
-      if (!video) return
-      if (video.paused) {
-        await video.play()
-        setPlaying(true)
-      } else {
-        video.pause()
-        setPlaying(false)
-      }
+    frames.forEach(({ src }) => {
+      const image = new Image()
+      image.src = src
     })
-  }
-
-  const reset = () => {
-    const video = videoRef.current
-    if (video) {
-      video.pause()
-      video.currentTime = 0
-    }
-    setPlaying(false)
-    setProgress(0)
-    setShowVideo(false)
-  }
+  }, [])
 
   return (
-    <div className="sequence-stage" aria-label="Open4D sequence viewer demonstration">
-      <div className="sequence-stage__viewport">
-        <div
-          className="frame-strip"
-          role="region"
-          aria-label="Sequence frames from 0.0 to 0.9 seconds"
-          aria-hidden={showVideo ? true : undefined}
-          tabIndex={showVideo ? -1 : 0}
-        >
-          {frames.map((frame, index) => (
-            <motion.figure
-              className="sequence-frame"
-              key={frame.src}
-              initial={reducedMotion ? false : { y: 14, filter: 'grayscale(1)' }}
-              animate={{ y: 0, filter: 'grayscale(0)' }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.06,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              <figcaption>t = {frame.label}</figcaption>
-              <img src={frame.src} alt="" />
-            </motion.figure>
-          ))}
-        </div>
-
-        <AnimatePresence>
-          {showVideo && (
-            <motion.div
-              className="sequence-video"
-              initial={reducedMotion ? false : { clipPath: 'inset(0 50% 0 50%)' }}
-              animate={{ clipPath: 'inset(0 0% 0 0%)' }}
-              exit={{ clipPath: 'inset(0 50% 0 50%)' }}
-              transition={{ duration: 0.42, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <video ref={videoRef} muted playsInline preload="metadata">
-                <source src="/media/open4d-viewer.webm" type="video/webm" />
-                <source src="/media/open4d-viewer.mp4" type="video/mp4" />
-              </video>
-            </motion.div>
-          )}
+    <figure className="sequence-stage" aria-labelledby="sequence-caption">
+      <div className="sequence-stage__image">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.img
+            key={active.src}
+            src={active.src}
+            alt={`Open4D viewer showing basketball sequence frame ${active.frame} of 10`}
+            initial={reducedMotion ? false : { opacity: 0, clipPath: 'inset(0 0 8% 0)' }}
+            animate={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
+            exit={reducedMotion ? undefined : { opacity: 0 }}
+            transition={{ duration: reducedMotion ? 0 : 0.22, ease: [0.16, 1, 0.3, 1] }}
+            width="420"
+            height="466"
+          />
         </AnimatePresence>
       </div>
 
-      <div className="sequence-stage__controls">
-        <button
-          className="media-control"
-          type="button"
-          aria-label={playing ? 'Pause sequence' : 'Play sequence'}
-          onClick={togglePlayback}
-        >
-          {playing ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}
-          <span>{playing ? 'Pause sequence' : 'Play sequence'}</span>
-        </button>
-        <div
-          className="timeline"
-          role="progressbar"
-          aria-label="Sequence playback"
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={Math.round(progress * 100)}
-        >
-          <span style={{ width: `${progress * 100}%` }} />
+      <div className="sequence-stage__panel">
+        <div>
+          <p className="instrument-label">Working example</p>
+          <h2>Inspect a mesh sequence one frame at a time.</h2>
+          <p>
+            The repository example loads numbered mesh files, reports sequence
+            information, and gives researchers a small viewer for orbiting,
+            scrubbing, stepping, and recording.
+          </p>
         </div>
-        <span className="time-readout">{(progress * 0.9).toFixed(1)} / 0.9 s</span>
-        <button className="icon-control" type="button" onClick={reset} aria-label="Reset sequence">
-          <RotateCcw aria-hidden="true" />
-        </button>
+
+        <dl className="sequence-readout">
+          <div><dt>Frame</dt><dd>{active.frame} / 10</dd></div>
+          <div><dt>Time</dt><dd>{active.time}</dd></div>
+          <div><dt>Source index</dt><dd>{active.source}</dd></div>
+          <div><dt>Rate</dt><dd>10 fps</dd></div>
+          <div><dt>Vertices</dt><dd>{active.vertices}</dd></div>
+          <div><dt>Triangles</dt><dd>{active.triangles}</dd></div>
+        </dl>
+
+        <p className="sr-only" role="status" aria-live="polite">
+          Frame {active.frame} selected at {active.time}, {active.vertices} vertices and {active.triangles} triangles.
+        </p>
+
+        <div className="frame-selector" aria-label="Choose a sequence frame">
+          {frames.map((frame, index) => (
+            <button
+              key={frame.src}
+              type="button"
+              className={index === selected ? 'is-active' : undefined}
+              aria-pressed={index === selected}
+              aria-label={`Show frame ${frame.frame} at ${frame.time}`}
+              onClick={() => setSelected(index)}
+            >
+              <span>{frame.frame}</span>
+              <small>{frame.time}</small>
+            </button>
+          ))}
+        </div>
       </div>
 
-      <div className="sequence-stage__caption">
-        <p>Ten basketball frames loaded and played by the Open4D example viewer.</p>
-        <dl>
-          <div>
-            <dt>Rate</dt>
-            <dd>10 fps</dd>
-          </div>
-          <div>
-            <dt>Vertices</dt>
-            <dd>20,997</dd>
-          </div>
-          <div>
-            <dt>Triangles</dt>
-            <dd>39,356</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
+      <figcaption id="sequence-caption">
+        Five sampled frames from the ten-frame basketball mesh sequence included
+        with the TVMC research code.
+      </figcaption>
+    </figure>
   )
 }

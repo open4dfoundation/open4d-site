@@ -5,8 +5,8 @@ import { Link, NavLink } from 'react-router-dom'
 import { links } from '../data/content'
 
 const navItems = [
-  { label: 'Examples', href: '/#examples' },
-  { label: 'Work', to: '/work' },
+  { label: 'Repository map', href: '/#repository-map' },
+  { label: 'Research', to: '/work' },
   { label: 'Status', to: '/status' },
 ]
 

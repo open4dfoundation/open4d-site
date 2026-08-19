@@ -1,236 +1,177 @@
-import * as Tabs from '@radix-ui/react-tabs'
-import { ArrowDown, ArrowUpRight, Github } from 'lucide-react'
-import { BenchmarkChart } from '../components/BenchmarkChart'
+import { ArrowRight, ArrowUpRight, Github } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { SequenceStage } from '../components/SequenceStage'
-import {
-  availableNow,
-  beingBuilt,
-  links,
-  researchStories,
-} from '../data/content'
+import { links, repositoryAreas, researchStories } from '../data/content'
 
 export function HomePage() {
   return (
     <main>
       <section className="hero page-shell">
+        <div className="release-line" aria-label="Project release information">
+          <span>Open4D repository brief</span>
+          <span>v0.2-dev</span>
+          <span>Updated 13 August 2026</span>
+        </div>
+
         <div className="hero__copy">
           <h1>Tools for 3D data that changes over time.</h1>
           <div className="hero__intro">
             <p>
-              Open4D is an open-source research project for loading, viewing,
-              compressing, and comparing mesh and point-cloud sequences.
+              Open4D brings sequence loading, viewing, comparison, compression
+              research, reconstruction, and integrations into one open repository.
+            </p>
+            <p className="scope-note">
+              Start with the shared viewer examples. The larger research projects
+              keep their own setup and status.
             </p>
             <div className="hero__actions">
               <a className="button button--primary" href={links.discussions} target="_blank" rel="noreferrer">
-                Tell us what breaks
+                Describe your workflow
                 <ArrowUpRight aria-hidden="true" />
               </a>
               <a className="text-link" href={links.repository} target="_blank" rel="noreferrer">
                 <Github aria-hidden="true" />
-                Browse the code
+                Browse the repository
               </a>
             </div>
           </div>
         </div>
 
         <SequenceStage />
-
-        <div className="hero__status">
-          <span className="status-dot" aria-hidden="true" />
-          <p>
-            Open4D is early research software. The viewer and several research
-            components work today; shared APIs and complete workflows are still
-            being built.
-          </p>
-          <a href="#examples" aria-label="Continue to working examples">
-            <ArrowDown aria-hidden="true" />
-          </a>
-        </div>
       </section>
 
-      <section className="task-section page-shell" id="examples">
+      <section className="repository-section page-shell" id="repository-map">
         <div className="section-heading section-heading--split">
-          <h2>One sequence, several jobs.</h2>
+          <h2>Find the part that matches your job.</h2>
           <p>
-            The shared examples focus on a narrow path that can be checked:
-            open frames, inspect time and topology, play the sequence, then
-            compare another result against it.
+            The repository is wider than any one codec. This map separates the
+            shared tools from research pipelines and tool-specific integrations.
           </p>
         </div>
 
-        <ol className="task-line">
-          <li>
-            <strong>Load</strong>
-            <span>A folder of OBJ or PLY frames, or a time-sampled USD file.</span>
-          </li>
-          <li>
-            <strong>Inspect</strong>
-            <span>Frame count, rate, topology, bounds, and source indices.</span>
-          </li>
-          <li>
-            <strong>Play</strong>
-            <span>Orbit, scrub, pause, step, and capture a short recording.</span>
-          </li>
-          <li>
-            <strong>Compare</strong>
-            <span>View source and decoded sequences with synchronized controls.</span>
-          </li>
-        </ol>
+        <div className="repository-table" role="table" aria-label="Open4D repository areas">
+          <div className="repository-table__header" role="row">
+            <span role="columnheader">Task</span>
+            <span role="columnheader">Where it lives</span>
+            <span role="columnheader">What is there</span>
+            <span role="columnheader">Evidence</span>
+          </div>
+          {repositoryAreas.map((area) => (
+            <div className="repository-table__row" role="row" key={area.task}>
+              <strong role="cell" data-label="Task">{area.task}</strong>
+              <span role="cell" data-label="Where it lives" className="scope-label">{area.scope}</span>
+              <p role="cell" data-label="What is there">{area.detail}</p>
+              <span role="cell" data-label="Evidence">{area.evidence}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="comparison-section">
         <div className="page-shell comparison-section__inner">
-          <div className="comparison-section__copy">
-            <h2>Compare the result, not just the claim.</h2>
-            <p>
-              The comparison example reads two sequences through the same
-              loader, keeps their cameras and frames aligned, and colors the
-              decoded surface by geometric error.
-            </p>
-          </div>
-
-          <Tabs.Root className="comparison-tabs" defaultValue="playback">
-            <Tabs.List className="comparison-tabs__list" aria-label="Comparison details">
-              <Tabs.Trigger value="playback">Playback</Tabs.Trigger>
-              <Tabs.Trigger value="measurement">What it measures</Tabs.Trigger>
-            </Tabs.List>
-            <Tabs.Content value="playback" className="comparison-tabs__content">
-              <figure className="comparison-media">
-                <video controls muted playsInline preload="metadata" poster="/media/comparison-poster.jpg">
-                  <source src="/media/open4d-comparison.webm" type="video/webm" />
-                  <source src="/media/open4d-comparison.mp4" type="video/mp4" />
-                </video>
-                <figcaption>
-                  Reference and four decoded basketball sequences shown by the
-                  repository comparison renderer.
-                </figcaption>
-              </figure>
-            </Tabs.Content>
-            <Tabs.Content value="measurement" className="comparison-tabs__content measurement-note">
-              <dl>
-                <div>
-                  <dt>Distance</dt>
-                  <dd>Bidirectional nearest-vertex point or plane distance.</dd>
-                </div>
-                <div>
-                  <dt>Summary</dt>
-                  <dd>Per-frame RMS, maximum distance, and PSNR.</dd>
-                </div>
-                <div>
-                  <dt>Limit</dt>
-                  <dd>
-                    Vertex-set measurements are not area-weighted and do not
-                    replace a codec's own scientific evaluation.
-                  </dd>
-                </div>
+          <div className="comparison-layout">
+            <div className="comparison-section__copy">
+              <h2>Put decoded results beside the source.</h2>
+              <p>
+                The comparison example uses one camera and one frame position for
+                every sequence, then colors decoded vertices by their distance from
+                the source. This frame places N4MC, QNDF, TVMC, and TSMC beside the
+                same basketball source mesh.
+              </p>
+              <dl className="comparison-facts">
+                <div><dt>View</dt><dd>Reference plus four decoded sequences</dd></div>
+                <div><dt>Measure</dt><dd>Bidirectional nearest-vertex distance</dd></div>
+                <div><dt>Report</dt><dd>Per-frame RMS, maximum distance, and PSNR</dd></div>
               </dl>
-            </Tabs.Content>
-          </Tabs.Root>
+            </div>
+
+            <figure className="comparison-figure">
+              <div className="comparison-viewport" role="region" tabIndex={0} aria-label="Scrollable comparison figure">
+                <div className="comparison-canvas">
+                  <img
+                    src="/media/comparison-panels.jpg"
+                    alt="Reference basketball mesh beside N4MC, QNDF, TVMC, and TSMC decoded results"
+                    width="1400"
+                    height="444"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="error-key" aria-label="Error color scale from zero to 1.5 percent">
+                    <div aria-hidden="true">
+                      <span /><span /><span /><span /><span /><span /><span /><span />
+                    </div>
+                    <p><span>0.0%</span><span>decoded-to-source distance</span><span>1.5%</span></p>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                Basketball comparison renderer at one aligned frame. Color reports
+                decoded-to-source distance as a percentage of the bounding-box diagonal.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section className="benchmark-section page-shell">
-        <div className="benchmark-section__copy">
-          <h2>Faster in one test. More memory in the same test.</h2>
-          <p>
-            A V-DMC decoder change parallelized independent frame work. In a
-            ten-frame HM full-output test, wall time fell from 1.978 seconds to
-            0.704 seconds. All 20 checks passed and every generated OBJ, PNG,
-            and MTL file was byte-identical.
-          </p>
-          <p className="limitation">
-            Peak memory increased from about 144 MB to 372 MB. These numbers
-            describe this test setup only.
-          </p>
-          <a className="text-link" href={links.vdmcPullRequest} target="_blank" rel="noreferrer">
-            Read the test record
-            <ArrowUpRight aria-hidden="true" />
-          </a>
-        </div>
-        <BenchmarkChart />
-      </section>
-
-      <section className="work-section page-shell">
+      <section className="work-section page-shell" id="research">
         <div className="section-heading section-heading--split">
-          <h2>Recent work, with its limits.</h2>
+          <h2>Research records, not product claims.</h2>
           <p>
-            Each story starts with one result, then records the conditions and
-            the part that remains unfinished.
+            Each item answers a different question. Results stay beside their test
+            conditions, while full methods and setup remain in the linked record.
           </p>
         </div>
 
-        <div className="story-list">
+        <div className="research-register">
           {researchStories.map((story) => (
-            <article className="story-row" key={story.id}>
+            <article className="research-record" key={story.id}>
+              <div className="research-record__id">
+                <span>{story.id.toUpperCase()}</span>
+                <span>{story.id === 'vdmc' ? 'Decoder test' : story.id === 'tsmc' ? 'Scene mesh codec' : 'Reproducibility'}</span>
+              </div>
               <div>
                 <h3>{story.title}</h3>
                 <p>{story.summary}</p>
               </div>
-              <div className="story-row__limit">
-                <strong>Limit</strong>
+              <div className="research-record__note">
                 <p>{story.limitation}</p>
                 <a href={story.href} target="_blank" rel="noreferrer">
-                  {story.linkLabel}
-                  <ArrowUpRight aria-hidden="true" />
+                  {story.linkLabel}<ArrowUpRight aria-hidden="true" />
                 </a>
               </div>
             </article>
           ))}
         </div>
+
+        <div className="work-section__footer">
+          <p>Browse codecs, reconstruction, integrations, and shared tools together.</p>
+          <Link className="text-link" to="/work">Open the research index <ArrowRight aria-hidden="true" /></Link>
+        </div>
       </section>
 
-      <section className="status-section page-shell">
-        <div className="section-heading section-heading--split">
-          <h2>What works now. What does not.</h2>
+      <section className="current-scope page-shell">
+        <div>
+          <h2>Current scope</h2>
           <p>
-            Status is part of the result. The detailed handbook records the
-            audit evidence and the next smallest useful piece of work.
+            Shared geometry objects, viewer examples, comparison code, and an Open3D
+            adapter are usable now. Stable public I/O and metrics APIs are next.
           </p>
         </div>
-
-        <div className="status-columns">
-          <div>
-            <h3>Available now</h3>
-            <ul>
-              {availableNow.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-          <div>
-            <h3>Still being built</h3>
-            <ul>
-              {beingBuilt.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-        </div>
-
-        <div className="status-section__footer">
-          <p>Repository audit recorded 13 August 2026.</p>
-          <a className="text-link" href={links.handbook} target="_blank" rel="noreferrer">
-            Read the full project status
-            <ArrowUpRight aria-hidden="true" />
-          </a>
-        </div>
+        <Link className="text-link" to="/status">Read status by area <ArrowRight aria-hidden="true" /></Link>
       </section>
 
       <section className="question-section">
         <div className="page-shell question-section__inner">
-          <h2>What is the hardest part of working with 3D data that changes over time?</h2>
+          <h2>Which script is holding your 3D workflow together?</h2>
           <div className="question-section__body">
-            <ol>
-              <li>What kind of data do you use?</li>
-              <li>Which tools or formats do you move it between?</li>
-              <li>Which step needs custom code or breaks most often?</li>
-            </ol>
-            <div>
-              <p>
-                A short description is useful. You do not need to share private
-                data or code.
-              </p>
-              <a className="button button--inverse" href={links.discussions} target="_blank" rel="noreferrer">
-                Answer on GitHub
-                <ArrowUpRight aria-hidden="true" />
-              </a>
-            </div>
+            <p>
+              Tell us what data you use, which tools or formats it moves between,
+              and the step that still needs custom code. A short description is enough.
+            </p>
+            <a className="button button--inverse" href={links.discussions} target="_blank" rel="noreferrer">
+              Describe your workflow
+              <ArrowUpRight aria-hidden="true" />
+            </a>
           </div>
         </div>
       </section>
