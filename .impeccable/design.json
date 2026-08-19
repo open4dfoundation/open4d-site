@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-19T18:07:17Z",
+  "title": "Design System: Open4D",
+  "extensions": {
+    "colorMeta": {
+      "utility-iron": { "role": "primary", "displayName": "Utility Iron", "canonical": "#32373a", "tonalRamp": ["#101213", "#171a1c", "#25292c", "#32373a", "#596063", "#858b8d", "#bcc0bf", "#eceeeb"] },
+      "carbon": { "role": "primary", "displayName": "Carbon", "canonical": "#171a1c", "tonalRamp": ["#0d0f10", "#171a1c", "#292d2f", "#454a4c", "#6c7273", "#9ca1a0", "#d1d3d0", "#f2f2ee"] },
+      "utility-mist": { "role": "primary", "displayName": "Utility Mist", "canonical": "#e3e5e2", "tonalRamp": ["#121415", "#25292a", "#424748", "#676c6c", "#939896", "#bdc1be", "#e3e5e2", "#f7f7f3"] },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#111318", "tonalRamp": ["#111318", "#242932", "#3d444e", "#616873", "#8a929e", "#b6bec8", "#e0e4e9", "#f7f8fa"] },
+      "body-ink": { "role": "neutral", "displayName": "Body Ink", "canonical": "#353b44", "tonalRamp": ["#111318", "#242932", "#353b44", "#59616d", "#858e9a", "#b4bbc5", "#dfe3e8", "#f7f8fa"] },
+      "muted-ink": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#626665", "tonalRamp": ["#151717", "#2b2e2d", "#464a49", "#626665", "#8c908e", "#b6b9b6", "#dedfdb", "#f6f6f2"] },
+      "cool-ground": { "role": "neutral", "displayName": "Warm Utility Ground", "canonical": "#f1f1ed", "tonalRamp": ["#161716", "#30312f", "#50524f", "#757873", "#a1a39d", "#cbccc6", "#e8e8e3", "#f1f1ed"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#fbfbf8", "tonalRamp": ["#171817", "#323330", "#535450", "#797a75", "#a5a69f", "#d0d0c9", "#ecece7", "#fbfbf8"] },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#cfd1cd", "tonalRamp": ["#171918", "#313432", "#525653", "#787d79", "#a3a7a3", "#cfd1cd", "#e8e9e5", "#f8f8f5"] },
+      "rule-strong": { "role": "neutral", "displayName": "Strong Rule", "canonical": "#999e9c", "tonalRamp": ["#151716", "#2e3230", "#4e5451", "#747a77", "#999e9c", "#c0c4c1", "#e0e2de", "#f6f7f3"] },
+      "focus-amber": { "role": "tertiary", "displayName": "Focus Amber", "canonical": "#c88927", "tonalRamp": ["#2d1d08", "#563913", "#805817", "#a97420", "#c88927", "#dda957", "#efce99", "#faf0dd"] },
+      "chart-muted": { "role": "neutral", "displayName": "Chart Muted", "canonical": "#adb1ae", "tonalRamp": ["#151716", "#303330", "#515652", "#787d79", "#adb1ae", "#cacdca", "#e5e7e3", "#f7f8f4"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "One blunt page-level statement." },
+      "headline": { "displayName": "Headline", "purpose": "Section arguments and major results." },
+      "body": { "displayName": "Body", "purpose": "Explanations, evidence, and limitations." },
+      "label": { "displayName": "Measured Label", "purpose": "Timestamps, chart values, state, and source metadata." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "state", "value": "180ms ease", "purpose": "Hover, color, and underline state changes." },
+      { "name": "reveal", "value": "600ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Registered frame entry and major content reveals." },
+      { "name": "media-replace", "value": "420ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Replace the contact sheet with the playing viewer." }
+    ],
+    "breakpoints": [
+      { "name": "navigation", "value": "1000px" },
+      { "name": "compact", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action on a neutral surface.",
+      "html": "<button class=\"ds-button-primary\">Tell us what breaks <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-button-primary{min-height:52px;display:inline-flex;align-items:center;gap:12px;padding:0 20px;border:0;border-radius:5px;background:var(--accent,#32373a);color:#fff;font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-primary svg{width:18px;fill:none;stroke:currentColor;stroke-width:2}.ds-button-primary:hover{background:var(--accent-strong,#171a1c);transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "The response action on a carbon field.",
+      "html": "<button class=\"ds-button-inverse\">Answer on GitHub</button>",
+      "css": ".ds-button-inverse{min-height:52px;padding:0 20px;border:0;border-radius:5px;background:#fbfbf8;color:var(--accent-strong,#171a1c);font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-inverse:hover{background:#eceeeb;transform:translateY(-2px)}.ds-button-inverse:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "description": "A quiet path to source evidence or deeper records.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Read the test record</a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:10px;color:var(--accent-strong,#171a1c);font:630 16px/1.4 'Archivo Variable',Arial,sans-serif;text-decoration-thickness:1px;text-underline-offset:5px}.ds-text-link:hover{color:var(--accent,#32373a)}.ds-text-link:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Plain text navigation with one measured active mark.",
+      "html": "<nav class=\"ds-nav\"><strong>Open<span>4D</span></strong><div><a class=\"active\" href=\"#\">Examples</a><a href=\"#\">Work</a><a href=\"#\">Status</a></div></nav>",
+      "css": ".ds-nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line,#cfd1cd);color:var(--ink,#111318);font-family:'Archivo Variable',Arial,sans-serif}.ds-nav strong{font-size:24px;letter-spacing:-.035em}.ds-nav strong span{color:var(--accent,#32373a)}.ds-nav div{display:flex;gap:30px}.ds-nav a{position:relative;color:inherit;text-decoration:none;font-weight:570}.ds-nav a.active:after,.ds-nav a:hover:after{content:'';position:absolute;right:0;bottom:-8px;left:0;height:2px;background:var(--accent,#32373a)}.ds-nav a:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:3px}"
+    },
+    {
+      "name": "Comparison Tabs",
+      "kind": "custom",
+      "description": "A compact view switch used only inside the comparison field.",
+      "html": "<div class=\"ds-tabs\"><button class=\"active\">Playback</button><button>What it measures</button></div>",
+      "css": ".ds-tabs{display:inline-flex;gap:4px;padding:4px;border:1px solid rgba(255,255,255,.42);border-radius:7px;background:var(--accent-strong,#171a1c)}.ds-tabs button{padding:10px 15px;border:0;border-radius:4px;background:transparent;color:#e2e4e1;font-family:'Archivo Variable',Arial,sans-serif}.ds-tabs button.active{background:#fbfbf8;color:var(--accent-strong,#171a1c)}.ds-tabs button:focus-visible{outline:3px solid var(--focus,#c88927);outline-offset:2px}"
+    },
+    {
+      "name": "Sequence Stage",
+      "kind": "custom",
+      "refersTo": "evidence-panel",
+      "description": "The signature registered-frame instrument.",
+      "html": "<div class=\"ds-stage\"><div class=\"ds-frames\"><span>t = 0.0 s</span><span>t = 0.2 s</span><span>t = 0.4 s</span><span>t = 0.6 s</span><span>t = 0.9 s</span></div><div class=\"ds-controls\">Play sequence <i></i><code>0.0 / 0.9 s</code></div></div>",
+      "css": ".ds-stage{overflow:hidden;border:1px solid var(--line-strong,#999e9c);border-radius:5px;background:#fbfbf8;color:var(--ink,#111318);font-family:'Archivo Variable',Arial,sans-serif}.ds-frames{height:180px;display:grid;grid-template-columns:repeat(5,1fr);background:#d8dad7}.ds-frames span{padding:12px;border-right:1px solid var(--line-strong,#999e9c);font:12px 'Source Code Pro Variable',monospace}.ds-controls{min-height:62px;display:flex;align-items:center;gap:20px;padding:0 18px;border-top:1px solid var(--line-strong,#999e9c);font-weight:650}.ds-controls i{position:relative;height:3px;flex:1;background:#c7cac7}.ds-controls i:before{content:'';display:block;width:30%;height:100%;background:var(--accent,#32373a)}.ds-controls code{font-size:12px;color:#48505b}"
+    },
+    {
+      "name": "Status Register",
+      "kind": "card",
+      "refersTo": "evidence-panel",
+      "description": "Two ruled columns for verified and unfinished work.",
+      "html": "<div class=\"ds-status\"><section><h3>Available now</h3><p>Sequence playback and frame inspection</p></section><section><h3>Still being built</h3><p>Stable shared I/O API</p></section></div>",
+      "css": ".ds-status{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--line-strong,#9ca5b2);background:var(--line-strong,#9ca5b2);color:var(--ink,#111318);font-family:'Archivo Variable',Arial,sans-serif}.ds-status section{padding:30px;background:#fff}.ds-status h3{margin:0 0 28px;font-size:24px;letter-spacing:-.025em}.ds-status p{margin:0;padding:16px 0;border-bottom:1px solid var(--line,#cfd5dd);color:#3d444e}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Evidence Bench",
+    "overview": "Open4D looks like a clean place to inspect work in progress. Large plain statements establish the question, then real frames, controls, measurements, and limitations carry the argument. The interface is bright, technical, and confident without trying to imitate a command line or a science-fiction display. The system stays visually flat and uses scale, rules, and full-width carbon fields to separate modes. It rejects glossy startup decoration, unsupported product imagery, and feature-card catalogues. Real project output is the primary visual material.",
+    "keyCharacteristics": [
+      "Real changing-3D output appears before architecture or ambition.",
+      "Large compressed headings sit against small, measured supporting copy.",
+      "Iron and carbon own actions and whole evidence fields; they are not scattered as decoration.",
+      "Fine rules register rows, frames, and status without turning them into cards.",
+      "Limitations travel with results."
+    ],
+    "rules": [
+      { "name": "The Dark Field Has a Job Rule", "body": "Iron or carbon marks an action, an active measurement, or a whole change of context; neither is used as decoration.", "section": "colors" },
+      { "name": "The Evidence Before Claim Rule", "body": "A measured result and its source treatment must appear before broader statements about capability.", "section": "colors" },
+      { "name": "The Plain Sentence Rule", "body": "Headlines state the task, result, or limitation in ordinary language; do not turn category terms into slogans.", "section": "typography" },
+      { "name": "The Flat by Default Rule", "body": "A surface earns separation through structure and contrast, never through a decorative shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do put a real frame, result, or measurement next to every capability statement.",
+      "Do keep the interface monochrome so source media and measured data retain their own meaning.",
+      "Do use full-width carbon fields when the page changes from explanation to comparison or response.",
+      "Do preserve wide gutters, long rules, and clear reading order before adding another container.",
+      "Do keep limitations visually adjacent to the result they qualify.",
+      "Do use motion for state changes, playback, and entry sequencing, with reduced-motion support."
+    ],
+    "donts": [
+      "Don't invent uploads, dashboards, APIs, format support, or roadmap states that the repository does not verify.",
+      "Don't add gradients, glow, glass, floating blobs, or generic 3D decoration.",
+      "Don't organize the marketing page as a repeated grid of rounded feature cards.",
+      "Don't introduce a saturated brand accent; interface hierarchy comes from value, scale, and rules.",
+      "Don't hide unfinished work behind aspirational language."
+    ]
+  }
+}
