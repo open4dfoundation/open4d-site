@@ -32,6 +32,10 @@ describe('Open4D homepage', () => {
     const user = userEvent.setup()
     renderPage()
 
+    const playButton = screen.getByRole('button', { name: /play sampled sequence/i })
+    await user.click(playButton)
+    expect(screen.getByRole('button', { name: /pause sequence/i })).toBeVisible()
+
     const lastFrame = screen.getByRole('button', { name: /show frame 10 at 0.9 s/i })
     await user.click(lastFrame)
     expect(lastFrame).toHaveAttribute('aria-pressed', 'true')

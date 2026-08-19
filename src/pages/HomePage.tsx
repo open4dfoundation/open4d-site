@@ -7,12 +7,6 @@ export function HomePage() {
   return (
     <main>
       <section className="hero page-shell">
-        <div className="release-line" aria-label="Project release information">
-          <span>Open4D repository brief</span>
-          <span>v0.2-dev</span>
-          <span>Updated 13 August 2026</span>
-        </div>
-
         <div className="hero__copy">
           <h1>Tools for 3D data that changes over time.</h1>
           <div className="hero__intro">
@@ -54,14 +48,12 @@ export function HomePage() {
             <span role="columnheader">Task</span>
             <span role="columnheader">Where it lives</span>
             <span role="columnheader">What is there</span>
-            <span role="columnheader">Evidence</span>
           </div>
           {repositoryAreas.map((area) => (
             <div className="repository-table__row" role="row" key={area.task}>
               <strong role="cell" data-label="Task">{area.task}</strong>
               <span role="cell" data-label="Where it lives" className="scope-label">{area.scope}</span>
               <p role="cell" data-label="What is there">{area.detail}</p>
-              <span role="cell" data-label="Evidence">{area.evidence}</span>
             </div>
           ))}
         </div>

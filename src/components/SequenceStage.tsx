@@ -1,4 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { Pause, Play } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const frames = [
@@ -11,6 +12,7 @@ const frames = [
 
 export function SequenceStage() {
   const [selected, setSelected] = useState(2)
+  const [playing, setPlaying] = useState(false)
   const reducedMotion = useReducedMotion()
   const active = frames[selected]
 
@@ -20,6 +22,23 @@ export function SequenceStage() {
       image.src = src
     })
   }, [])
+
+  useEffect(() => {
+    if (!playing) return
+
+    const nextIndex = (selected + 1) % frames.length
+    const currentTime = Number.parseFloat(frames[selected].time)
+    const nextTime = Number.parseFloat(frames[nextIndex].time)
+    const delay = nextIndex === 0 ? 300 : (nextTime - currentTime) * 1000
+    const timer = window.setTimeout(() => setSelected(nextIndex), delay)
+
+    return () => window.clearTimeout(timer)
+  }, [playing, selected])
+
+  const togglePlayback = () => {
+    if (!playing && selected === frames.length - 1) setSelected(0)
+    setPlaying((value) => !value)
+  }
 
   return (
     <figure className="sequence-stage" aria-labelledby="sequence-caption">
@@ -59,24 +78,33 @@ export function SequenceStage() {
           <div><dt>Triangles</dt><dd>{active.triangles}</dd></div>
         </dl>
 
-        <p className="sr-only" role="status" aria-live="polite">
+        <p className="sr-only" role="status" aria-live={playing ? 'off' : 'polite'}>
           Frame {active.frame} selected at {active.time}, {active.vertices} vertices and {active.triangles} triangles.
         </p>
 
-        <div className="frame-selector" aria-label="Choose a sequence frame">
-          {frames.map((frame, index) => (
-            <button
-              key={frame.src}
-              type="button"
-              className={index === selected ? 'is-active' : undefined}
-              aria-pressed={index === selected}
-              aria-label={`Show frame ${frame.frame} at ${frame.time}`}
-              onClick={() => setSelected(index)}
-            >
-              <span>{frame.frame}</span>
-              <small>{frame.time}</small>
-            </button>
-          ))}
+        <div className="sequence-controls">
+          <button className="sequence-playback" type="button" onClick={togglePlayback}>
+            {playing ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}
+            {playing ? 'Pause sequence' : 'Play sampled sequence'}
+          </button>
+          <div className="frame-selector" aria-label="Choose a sequence frame">
+            {frames.map((frame, index) => (
+              <button
+                key={frame.src}
+                type="button"
+                className={index === selected ? 'is-active' : undefined}
+                aria-pressed={index === selected}
+                aria-label={`Show frame ${frame.frame} at ${frame.time}`}
+                onClick={() => {
+                  setPlaying(false)
+                  setSelected(index)
+                }}
+              >
+                <span>{frame.frame}</span>
+                <small>{frame.time}</small>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

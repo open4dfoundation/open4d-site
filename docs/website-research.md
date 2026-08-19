@@ -43,17 +43,19 @@ project sites. External references included:
 - A sequence workbench built around the viewer
 - A research proceedings index
 - A technical field guide
-- A versioned repository brief
+- A direct working reference
 - A chronological lab notebook
 
-The versioned repository brief was selected. It matches how the project is
-actually maintained, supports concise status language, and lets every research
-area appear at the same level without turning the homepage into a feature grid.
+The direct working reference was selected. It supports concise status language
+and lets every research area appear at the same level without turning the
+homepage into a feature grid. A release/date strip was tested and then removed
+because it described the document rather than helping visitors understand Open4D.
 
 ## Decisions implemented
 
-- Removed the hero video. Five real frames now switch inside one fixed viewport;
-  the subject is never cropped and the component height does not change.
+- Replaced the cropped hero video with user-triggered playback across five verified
+  real frames inside one fixed viewport. The subject remains complete and the
+  component height does not change.
 - Removed the comparison tabs and video. One stable still shows the aligned
   output, while the error scale and measurement explanation are native page text.
 - Added a repository map organized by user task and implementation scope.

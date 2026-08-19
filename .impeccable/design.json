@@ -72,7 +72,7 @@
       "name": "Primary Navigation",
       "kind": "nav",
       "description": "Sticky plain-text navigation with a measured active underline.",
-      "html": "<nav class=\"ds-nav\"><strong>Open<span>4D</span></strong><div><a class=\"active\" href=\"#\">Repository map</a><a href=\"#\">Research</a><a href=\"#\">Status</a></div></nav>",
+      "html": "<nav class=\"ds-nav\"><strong>Open<span>4D</span></strong><div><a href=\"#\">Research</a><a class=\"active\" href=\"#\">Status</a><a href=\"#\">GitHub</a></div></nav>",
       "css": ".ds-nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #c9cbc6;background:rgba(239,239,235,.96);color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-nav strong{font-size:24px;letter-spacing:-.035em}.ds-nav strong span{color:#32373a}.ds-nav div{display:flex;gap:30px}.ds-nav a{position:relative;color:inherit;text-decoration:none;font-weight:590}.ds-nav a.active:after,.ds-nav a:hover:after{content:'';position:absolute;right:0;bottom:-7px;left:0;height:2px;background:#32373a}.ds-nav a:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
@@ -86,15 +86,15 @@
     {
       "name": "Sequence Stage",
       "kind": "custom",
-      "description": "The fixed selectable frame instrument with measured readouts.",
-      "html": "<div class=\"ds-stage\"><div class=\"ds-stage-image\">FRAME 05</div><section><small>WORKING EXAMPLE</small><h3>Inspect a mesh sequence one frame at a time.</h3><div class=\"ds-frame-buttons\"><button>01</button><button class=\"active\">05</button><button>10</button></div></section></div>",
+      "description": "The fixed playable frame instrument with measured readouts.",
+      "html": "<div class=\"ds-stage\"><div class=\"ds-stage-image\">FRAME 05</div><section><small>WORKING EXAMPLE</small><h3>Inspect a mesh sequence one frame at a time.</h3><button>Play sampled sequence</button><div class=\"ds-frame-buttons\"><button>01</button><button class=\"active\">05</button><button>10</button></div></section></div>",
       "css": ".ds-stage{display:grid;grid-template-columns:.68fr 1fr;border:1px solid #8f9491;background:#fbfbf8;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-stage-image{min-height:240px;display:grid;place-items:center;background:#222629;color:#fbfbf8;font:13px 'Source Code Pro Variable',monospace}.ds-stage section{padding:28px;border-left:1px solid #8f9491}.ds-stage small{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;letter-spacing:.05em}.ds-stage h3{font-size:28px;line-height:1;letter-spacing:-.035em}.ds-frame-buttons{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #8f9491}.ds-frame-buttons button{min-height:54px;border:0;border-right:1px solid #c9cbc6;background:transparent}.ds-frame-buttons button:last-child{border-right:0}.ds-frame-buttons button:hover{background:#e2e3df}.ds-frame-buttons button.active{background:#32373a;color:#fff}.ds-frame-buttons button:focus-visible{outline:3px solid #b8791b;outline-offset:2px}"
     },
     {
       "name": "Repository Register",
       "kind": "custom",
-      "description": "A task-oriented ruled register for repository scope and evidence.",
-      "html": "<div class=\"ds-register\"><header><span>Task</span><span>Where it lives</span><span>Evidence</span></header><div><strong>Load and inspect</strong><span>Shared tools</span><span>Viewer example</span></div><div><strong>Compress</strong><span>Research projects</span><span>Codec records</span></div></div>",
+      "description": "A task-oriented ruled register for repository scope and implementation detail.",
+      "html": "<div class=\"ds-register\"><header><span>Task</span><span>Where it lives</span><span>What is there</span></header><div><strong>Load and inspect</strong><span>Shared tools</span><span>Frame folders, OpenUSD, playback, and frame information</span></div><div><strong>Compress</strong><span>Research projects</span><span>Independent codec pipelines</span></div></div>",
       "css": ".ds-register{border-top:1px solid #8f9491;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-register header,.ds-register>div{display:grid;grid-template-columns:.8fr .7fr 1fr;gap:28px;padding:20px 0;border-bottom:1px solid #c9cbc6}.ds-register header{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;letter-spacing:.05em;text-transform:uppercase}.ds-register>div span{color:#5f6362}"
     },
     {
@@ -113,11 +113,10 @@
     }
   ],
   "narrative": {
-    "northStar": "The Versioned Repository Brief",
-    "overview": "Open4D reads like a dated technical brief that can be checked against the repository. A release line establishes version and recency; large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display. The page stays flat and near-monochrome. Scale, long rules, table-like registers, and full-width carbon or iron fields create hierarchy. Real project output is the visual material, while limitations remain attached to the result they qualify.",
+    "northStar": "The Working Reference",
+    "overview": "Open4D reads like a direct working reference that can be checked against the repository. Large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display. The page stays flat and near-monochrome. Scale, long rules, table-like registers, and full-width carbon or iron fields create hierarchy.",
     "keyCharacteristics": [
-      "A version and update date frame the site as a repository brief rather than a timeless campaign.",
-      "One fixed, selectable frame instrument shows real changing-3D output before architecture or ambition.",
+      "One fixed, playable frame instrument shows real changing-3D output before architecture or ambition.",
       "Task-oriented registers expose repository breadth without turning it into a feature-card grid.",
       "Equal research records keep codecs, reconstruction, and reproducibility work at the same visual level.",
       "Compact scope language states what works now without letting maturity messaging dominate the page."
@@ -131,7 +130,6 @@
       { "name": "The Flat by Default Rule", "body": "A surface earns separation through structure and contrast, never through a decorative shadow.", "section": "elevation" }
     ],
     "dos": [
-      "Do define the page as a versioned repository brief with visible version and recency.",
       "Do make ‘Describe your workflow’ the primary action and ‘Browse the repository’ the secondary action.",
       "Do put a real frame, result, measurement, or repository location next to capability statements.",
       "Do keep the interface monochrome so source media and measured error retain meaning.",
@@ -141,7 +139,7 @@
     ],
     "donts": [
       "Don't invent uploads, dashboards, APIs, format support, or roadmap states that the repository does not verify.",
-      "Don't add alternate modes, autoplay, or animated resizing to the fixed sequence or comparison evidence.",
+      "Don't autoplay or resize the sequence or comparison evidence during playback.",
       "Don't turn the three-row benchmark evidence into a decorative graphic.",
       "Don't add gradients, glow, glass, floating blobs, shadows, or generic 3D decoration.",
       "Don't organize the site as a repeated grid of rounded feature cards.",

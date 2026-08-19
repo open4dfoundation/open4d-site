@@ -142,18 +142,7 @@ button { color: inherit; }
 .menu-button svg { width: 20px; }
 .mobile-nav { display: none; }
 
-.hero { padding-top: 26px; }
-
-.release-line {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 28px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--line-strong);
-  color: var(--muted);
-  font-family: 'Source Code Pro Variable', monospace;
-  font-size: 0.75rem;
-}
+.hero { padding-top: 18px; }
 
 .hero__copy {
   display: grid;
@@ -324,6 +313,23 @@ button { color: inherit; }
   border: 1px solid var(--line-strong);
 }
 
+.sequence-controls { display: grid; gap: 10px; }
+
+.sequence-playback {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.sequence-playback:hover { background: var(--mist); }
+.sequence-playback svg { width: 17px; height: 17px; }
+
 .frame-selector button {
   min-width: 0;
   min-height: 58px;
@@ -395,7 +401,7 @@ button { color: inherit; }
 .repository-table__header,
 .repository-table__row {
   display: grid;
-  grid-template-columns: 0.55fr 0.46fr 1.25fr 0.58fr;
+  grid-template-columns: 0.55fr 0.46fr 1.5fr;
   gap: 28px;
   align-items: start;
   padding: 22px 0;
@@ -412,7 +418,6 @@ button { color: inherit; }
 
 .repository-table__row strong { font-size: 1.08rem; }
 .repository-table__row p { margin: 0; color: #444947; line-height: 1.5; }
-.repository-table__row > span:last-child { color: var(--muted); font-size: 0.9rem; }
 
 .scope-label {
   width: fit-content;
@@ -460,7 +465,6 @@ button { color: inherit; }
   height: auto;
   aspect-ratio: 1400 / 444;
   object-fit: contain;
-  border: 1px solid rgba(255,255,255,.42);
   background: #0a0c0d;
 }
 
@@ -763,9 +767,7 @@ button { color: inherit; }
   .page-shell, .site-header__inner { width: min(100% - 28px, 1420px); }
   .site-header__inner { min-height: 64px; }
   .mobile-nav { top: 64px; }
-  .hero { padding-top: 18px; }
-  .release-line { grid-template-columns: 1fr auto; }
-  .release-line span:last-child { display: none; }
+  .hero { padding-top: 0; }
   .hero__copy { padding-block: 48px 56px; }
   .hero h1, .interior-hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
   .sequence-stage { grid-template-columns: 1fr; }

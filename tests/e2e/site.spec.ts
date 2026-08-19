@@ -23,6 +23,10 @@ test('the sequence controls and comparison record work without layout switches',
 
   const stage = page.locator('.sequence-stage')
   const before = await stage.boundingBox()
+  await page.getByRole('button', { name: 'Play sampled sequence' }).click()
+  await expect(page.getByRole('button', { name: 'Pause sequence' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Show frame 07 at 0.6 s' })).toHaveAttribute('aria-pressed', 'true')
+  await page.getByRole('button', { name: 'Pause sequence' }).click()
   const lastFrame = page.getByRole('button', { name: 'Show frame 10 at 0.9 s' })
   await lastFrame.click()
   await expect(lastFrame).toHaveAttribute('aria-pressed', 'true')

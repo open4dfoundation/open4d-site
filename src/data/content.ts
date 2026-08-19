@@ -46,37 +46,31 @@ export const repositoryAreas = [
     task: 'Represent time',
     scope: 'Shared tools',
     detail: 'NumPy-backed geometry, frames, providers, and finite sequences.',
-    evidence: 'Core model and tests',
   },
   {
     task: 'Load and inspect',
     scope: 'Shared examples',
     detail: 'OBJ or PLY frame folders, optional OpenUSD, playback, and frame information.',
-    evidence: 'Viewer example',
   },
   {
     task: 'Compare results',
     scope: 'Shared example',
     detail: 'Aligned source and decoded sequences with vertex-distance summaries.',
-    evidence: 'Comparison renderer',
   },
   {
     task: 'Compress geometry',
     scope: 'Research projects',
     detail: 'N4MC, QNDF, QNDF-INT8, TVMC, TSMC, Draco, KLT, and MPEG V-DMC work.',
-    evidence: 'Independent pipelines',
   },
   {
     task: 'Reconstruct scenes',
     scope: 'Research project',
     detail: 'Synchronized RGB-D capture, transport, point clouds, and TSDF fusion.',
-    evidence: 'Hardware workflow',
   },
   {
     task: 'Connect other tools',
     scope: 'Integrations',
     detail: 'Open3D conversion, OpenUSD examples, and specialized Unity/XR playback.',
-    evidence: 'Adapters and examples',
   },
 ]
 

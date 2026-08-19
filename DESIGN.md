@@ -1,6 +1,6 @@
 ---
 name: Open4D
-description: A versioned repository brief for inspecting 3D data that changes over time.
+description: A direct working reference for inspecting 3D data that changes over time.
 colors:
   graphite: "#111318"
   carbon: "#171a1c"
@@ -89,16 +89,15 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Versioned Repository Brief"**
+**Creative North Star: "The Working Reference"**
 
-Open4D reads like a dated technical brief that can be checked against the repository. A release line establishes version and recency; large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display.
+Open4D reads like a working reference that can be checked against the repository. Large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display.
 
 The page stays flat and near-monochrome. Scale, long rules, table-like registers, and full-width carbon or iron fields create hierarchy. Real project output is the visual material, while limitations remain attached to the result they qualify.
 
 **Key Characteristics:**
 
-- A version and update date frame the site as a repository brief rather than a timeless campaign.
-- One fixed, selectable frame instrument shows real changing-3D output before architecture or ambition.
+- One fixed, playable frame instrument shows real changing-3D output before architecture or ambition.
 - Task-oriented registers expose repository breadth without turning it into a feature-card grid.
 - Equal research records keep codecs, reconstruction, and reproducibility work at the same visual level.
 - Compact scope language states what works now without letting maturity messaging dominate the page.
@@ -163,7 +162,7 @@ Pages use a centered shell capped at 1420px. Wide screens have 24px side gutters
 
 At 1060px, the desktop navigation becomes a square menu control, hero and interior headings stack, the comparison introduction reflows, and wide work records simplify. At 780px, evidence tables become labeled vertical records, the sequence instrument becomes one column, comparison evidence deliberately extends edge-to-edge, and its 760px canvas scrolls horizontally inside a keyboard-focusable native overflow region. At 480px, the frame well adopts the source aspect ratio, panel padding tightens, and the comparison facts and error-key labels simplify.
 
-The signature rhythm is release line, statement, artifact, register, and source. Repository and status information stays tabular on wide screens and becomes a deliberate labeled reading order on small screens. Media reserves its final aspect ratio before loading.
+The signature rhythm is statement, artifact, register, and source. Repository and status information stays tabular on wide screens and becomes a deliberate labeled reading order on small screens. Media reserves its final aspect ratio before loading.
 
 ## Elevation & Depth
 
@@ -190,15 +189,15 @@ The low-radius system is intentional. Repeated containers must not become rounde
 
 ### Navigation
 
-The sticky header is a translucent Utility Ground strip with a one-pixel rule. Desktop links receive a 2px iron underline on hover or active state. At 1060px the navigation becomes a 42px square outlined menu control and a full-width ruled Paper menu; it does not become a floating overlay card.
+The sticky header is a translucent Utility Ground strip with a one-pixel rule. It contains only Research, Status, and GitHub; the wordmark returns home. Desktop links receive a 2px iron underline on hover or active state. At 1060px the navigation becomes a 42px square outlined menu control and a full-width ruled Paper menu.
 
 ### Sequence Stage
 
-One complete viewer frame sits in a fixed dark well beside a Paper information panel. Five buttons select sampled frames without changing the container dimensions. The selected frame, time, source index, rate, vertex count, and triangle count update together; images always use `object-fit: contain`. Frame changes use a 220ms clipped fade and become immediate when reduced motion is requested.
+One complete viewer frame sits in a fixed dark well beside a Paper information panel. A play/pause control advances through five verified source frames; the same frames remain directly selectable without changing the container dimensions. Frame, time, source index, rate, vertex count, and triangle count update together. Playback is user-triggered and stops when a visitor selects a frame manually.
 
 ### Repository and Status Registers
 
-The repository register maps user tasks to scope, implementation detail, and evidence. The status register uses the same ruled row grammar for area, state, evidence, and next work. Column headers use measured labels; at 780px each cell gains its own visible label and records stack linearly.
+The repository register maps user tasks to scope and implementation detail. The status register uses the same ruled row grammar for area, state, evidence, and next work. Column headers use measured labels; at 780px each cell gains its own visible label and records stack linearly.
 
 ### Comparison Figure
 
@@ -220,7 +219,6 @@ Current scope is one compact ruled row pairing a short usable-now statement with
 
 ### Do:
 
-- **Do** define the page as a versioned repository brief with visible version and recency.
 - **Do** make “Describe your workflow” the primary action and “Browse the repository” the secondary action.
 - **Do** put a real frame, result, measurement, or repository location next to capability statements.
 - **Do** keep the interface monochrome so source media and measured error retain meaning.
@@ -231,7 +229,7 @@ Current scope is one compact ruled row pairing a short usable-now statement with
 ### Don't:
 
 - **Don't** invent uploads, dashboards, APIs, format support, or roadmap states that the repository does not verify.
-- **Don't** add alternate modes, autoplay, or animated resizing to the fixed sequence or comparison evidence.
+- **Don't** autoplay or resize the sequence or comparison evidence during playback.
 - **Don't** turn the three-row benchmark evidence into a decorative graphic.
 - **Don't** add gradients, glow, glass, floating blobs, shadows, or generic 3D decoration.
 - **Don't** organize the site as a repeated grid of rounded feature cards.
