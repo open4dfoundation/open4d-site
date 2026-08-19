@@ -86,9 +86,9 @@
     {
       "name": "Sequence Stage",
       "kind": "custom",
-      "description": "The fixed playable frame instrument with measured readouts.",
-      "html": "<div class=\"ds-stage\"><div class=\"ds-stage-image\">FRAME 05</div><section><small>WORKING EXAMPLE</small><h3>Inspect a mesh sequence one frame at a time.</h3><button>Play sampled sequence</button><div class=\"ds-frame-buttons\"><button>01</button><button class=\"active\">05</button><button>10</button></div></section></div>",
-      "css": ".ds-stage{display:grid;grid-template-columns:.68fr 1fr;border:1px solid #8f9491;background:#fbfbf8;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-stage-image{min-height:240px;display:grid;place-items:center;background:#222629;color:#fbfbf8;font:13px 'Source Code Pro Variable',monospace}.ds-stage section{padding:28px;border-left:1px solid #8f9491}.ds-stage small{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;letter-spacing:.05em}.ds-stage h3{font-size:28px;line-height:1;letter-spacing:-.035em}.ds-frame-buttons{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #8f9491}.ds-frame-buttons button{min-height:54px;border:0;border-right:1px solid #c9cbc6;background:transparent}.ds-frame-buttons button:last-child{border-right:0}.ds-frame-buttons button:hover{background:#e2e3df}.ds-frame-buttons button.active{background:#32373a;color:#fff}.ds-frame-buttons button:focus-visible{outline:3px solid #b8791b;outline-offset:2px}"
+      "description": "The complete viewer recording with native video controls and three source facts.",
+      "html": "<div class=\"ds-stage\"><div class=\"ds-stage-image\">NATIVE VIDEO</div><section><h3>Load and scrub a numbered mesh sequence.</h3><div class=\"ds-video-facts\"><span>10 frames</span><span>10 fps</span><span>1.0 s</span></div></section></div>",
+      "css": ".ds-stage{display:grid;grid-template-columns:.68fr 1fr;border:1px solid #8f9491;background:#fbfbf8;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-stage-image{min-height:240px;display:grid;place-items:center;background:#222629;color:#fbfbf8;font:13px 'Source Code Pro Variable',monospace}.ds-stage section{padding:28px;border-left:1px solid #8f9491}.ds-stage h3{font-size:28px;line-height:1;letter-spacing:-.035em}.ds-video-facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:46px;border:1px solid #8f9491}.ds-video-facts span{padding:18px;border-right:1px solid #c9cbc6;font:13px 'Source Code Pro Variable',monospace}.ds-video-facts span:last-child{border-right:0}"
     },
     {
       "name": "Repository Register",
@@ -116,7 +116,7 @@
     "northStar": "The Working Reference",
     "overview": "Open4D reads like a direct working reference that can be checked against the repository. Large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display. The page stays flat and near-monochrome. Scale, long rules, table-like registers, and full-width carbon or iron fields create hierarchy.",
     "keyCharacteristics": [
-      "One fixed, playable frame instrument shows real changing-3D output before architecture or ambition.",
+      "One complete viewer recording shows real changing-3D output before architecture or ambition.",
       "Task-oriented registers expose repository breadth without turning it into a feature-card grid.",
       "Equal research records keep codecs, reconstruction, and reproducibility work at the same visual level.",
       "Compact scope language states what works now without letting maturity messaging dominate the page."
@@ -135,7 +135,7 @@
       "Do keep the interface monochrome so source media and measured error retain meaning.",
       "Do preserve native horizontal scrolling for the comparison on narrow screens.",
       "Do keep limitations visually adjacent to the result they qualify.",
-      "Do honor reduced-motion preferences for navigation and frame replacement."
+      "Do honor reduced-motion preferences for authored navigation motion."
     ],
     "donts": [
       "Don't invent uploads, dashboards, APIs, format support, or roadmap states that the repository does not verify.",

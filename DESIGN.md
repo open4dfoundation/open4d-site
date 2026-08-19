@@ -108,7 +108,7 @@ The interface is deliberately monochrome: graphite, iron, paper, and rules organ
 
 ### Primary
 
-- **Utility Iron:** Primary actions, selected frame controls, and the closing workflow-response field.
+- **Utility Iron:** Primary actions and the closing workflow-response field.
 - **Carbon:** Whole comparison fields and the darkest contextual surfaces.
 - **Utility Mist:** Selection, limitation notes, and quiet hover feedback.
 
@@ -193,7 +193,7 @@ The sticky header is a translucent Utility Ground strip with a one-pixel rule. I
 
 ### Sequence Stage
 
-One complete viewer frame sits in a fixed dark well beside a Paper information panel. A play/pause control advances through five verified source frames; the same frames remain directly selectable without changing the container dimensions. Frame, time, source index, rate, vertex count, and triangle count update together. Playback is user-triggered and stops when a visitor selects a frame manually.
+The complete one-second viewer recording sits in a fixed dark well beside a Paper information panel. The browser's video controls handle play, pause, and scrubbing; the page does not replace still images or add a second playback model. Three fixed facts identify the recording's frame count, rate, and length.
 
 ### Repository and Status Registers
 
@@ -224,7 +224,7 @@ Current scope is one compact ruled row pairing a short usable-now statement with
 - **Do** keep the interface monochrome so source media and measured error retain meaning.
 - **Do** preserve native horizontal scrolling for the comparison on narrow screens.
 - **Do** keep limitations visually adjacent to the result they qualify.
-- **Do** honor reduced-motion preferences for navigation and frame replacement.
+- **Do** honor reduced-motion preferences for authored navigation motion.
 
 ### Don't:
 

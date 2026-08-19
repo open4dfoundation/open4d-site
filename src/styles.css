@@ -239,29 +239,21 @@ button { color: inherit; }
   background: #222629;
 }
 
-.sequence-stage__image img {
+.sequence-stage__image video {
   position: absolute;
   inset: 30px;
   width: calc(100% - 60px);
   height: calc(100% - 60px);
   object-fit: contain;
+  background: #222629;
 }
 
 .sequence-stage__panel {
   display: grid;
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: 1fr auto;
   gap: 38px;
   padding: clamp(32px, 5vw, 68px);
   border-left: 1px solid var(--line-strong);
-}
-
-.instrument-label {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-family: 'Source Code Pro Variable', monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .sequence-stage h2 {
@@ -306,47 +298,6 @@ button { color: inherit; }
   font-family: 'Source Code Pro Variable', monospace;
   font-size: 0.8rem;
 }
-
-.frame-selector {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  border: 1px solid var(--line-strong);
-}
-
-.sequence-controls { display: grid; gap: 10px; }
-
-.sequence-playback {
-  min-height: 46px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  border: 1px solid var(--line-strong);
-  background: transparent;
-  cursor: pointer;
-  font-weight: 650;
-}
-
-.sequence-playback:hover { background: var(--mist); }
-.sequence-playback svg { width: 17px; height: 17px; }
-
-.frame-selector button {
-  min-width: 0;
-  min-height: 58px;
-  display: grid;
-  align-content: center;
-  gap: 3px;
-  border: 0;
-  border-right: 1px solid var(--line);
-  background: transparent;
-  cursor: pointer;
-}
-
-.frame-selector button:last-child { border-right: 0; }
-.frame-selector button:hover { background: var(--mist); }
-.frame-selector button.is-active { background: var(--iron); color: white; }
-.frame-selector span { font-family: 'Source Code Pro Variable', monospace; font-size: 0.82rem; }
-.frame-selector small { font-size: 0.74rem; color: inherit; opacity: 0.76; }
 
 .sequence-stage > figcaption {
   grid-column: 1 / -1;
@@ -827,9 +778,8 @@ button { color: inherit; }
 
 @media (max-width: 480px) {
   .sequence-stage__image { min-height: 0; aspect-ratio: 420 / 466; padding: 18px; }
-  .sequence-stage__image img { inset: 18px; width: calc(100% - 36px); height: calc(100% - 36px); }
+  .sequence-stage__image video { inset: 18px; width: calc(100% - 36px); height: calc(100% - 36px); }
   .sequence-stage__panel { padding: 26px 20px; }
-  .frame-selector button { min-height: 54px; }
   .comparison-facts div { grid-template-columns: 1fr; gap: 5px; }
   .error-key p span:nth-child(2) { display: none; }
 }

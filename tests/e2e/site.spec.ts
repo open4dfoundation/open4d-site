@@ -18,18 +18,16 @@ test('homepage fits the viewport and has no serious accessibility violations', a
   expect(materialViolations).toEqual([])
 })
 
-test('the sequence controls and comparison record work without layout switches', async ({ page }) => {
+test('the sequence video and comparison record work without layout switches', async ({ page }) => {
   await page.goto('/')
 
   const stage = page.locator('.sequence-stage')
   const before = await stage.boundingBox()
-  await page.getByRole('button', { name: 'Play sampled sequence' }).click()
-  await expect(page.getByRole('button', { name: 'Pause sequence' })).toBeVisible()
-  await expect(page.getByRole('button', { name: 'Show frame 07 at 0.6 s' })).toHaveAttribute('aria-pressed', 'true')
-  await page.getByRole('button', { name: 'Pause sequence' }).click()
-  const lastFrame = page.getByRole('button', { name: 'Show frame 10 at 0.9 s' })
-  await lastFrame.click()
-  await expect(lastFrame).toHaveAttribute('aria-pressed', 'true')
+  const video = page.getByLabel('Open4D basketball mesh sequence')
+  await expect(video).toBeVisible()
+  await expect(video).toHaveJSProperty('controls', true)
+  await expect.poll(() => video.evaluate((element: HTMLVideoElement) => element.duration)).toBe(1)
+  await expect(page.locator('.sequence-stage__image img')).toHaveCount(0)
   const after = await stage.boundingBox()
   expect(after?.width).toBe(before?.width)
   expect(after?.height).toBe(before?.height)

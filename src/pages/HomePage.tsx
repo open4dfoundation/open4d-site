@@ -107,10 +107,10 @@ export function HomePage() {
 
       <section className="work-section page-shell" id="research">
         <div className="section-heading section-heading--split">
-          <h2>Research records, not product claims.</h2>
+          <h2>Decoder speed, Meta Quest 3 playback, and reproducibility.</h2>
           <p>
-            Each item answers a different question. Results stay beside their test
-            conditions, while full methods and setup remain in the linked record.
+            These are separate pieces of work. Each row keeps the result beside its
+            test conditions and links to the test record, project page, or paper.
           </p>
         </div>
 

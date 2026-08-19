@@ -53,9 +53,9 @@ because it described the document rather than helping visitors understand Open4D
 
 ## Decisions implemented
 
-- Replaced the cropped hero video with user-triggered playback across five verified
-  real frames inside one fixed viewport. The subject remains complete and the
-  component height does not change.
+- Put the complete one-second viewer recording in a fixed viewport with native
+  video controls. The page does not swap still images, crop the recording, or
+  animate the media container.
 - Removed the comparison tabs and video. One stable still shows the aligned
   output, while the error scale and measurement explanation are native page text.
 - Added a repository map organized by user task and implementation scope.
@@ -69,8 +69,8 @@ because it described the document rather than helping visitors understand Open4D
 
 - A first-time visitor can define Open4D from the first heading and paragraph.
 - Shared tools and independent research are visually distinct.
-- Selecting a frame changes neither stage dimensions nor surrounding layout.
-- No video, tab panel, or chart can introduce a height jump.
+- Video playback changes neither stage dimensions nor surrounding layout.
+- No tab panel or chart can introduce a height jump.
 - The page has no horizontal overflow at desktop or mobile test widths.
-- Main actions, frame controls, navigation, tables, and status remain keyboard and
+- Main actions, video controls, navigation, tables, and status remain keyboard and
   screen-reader accessible.

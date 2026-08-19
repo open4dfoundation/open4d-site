@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
 import { HomePage } from './HomePage'
@@ -28,18 +27,13 @@ describe('Open4D homepage', () => {
     )
   })
 
-  it('provides stable, accessible frame controls and comparison details', async () => {
-    const user = userEvent.setup()
+  it('provides normal video playback and comparison details', () => {
     renderPage()
 
-    const playButton = screen.getByRole('button', { name: /play sampled sequence/i })
-    await user.click(playButton)
-    expect(screen.getByRole('button', { name: /pause sequence/i })).toBeVisible()
-
-    const lastFrame = screen.getByRole('button', { name: /show frame 10 at 0.9 s/i })
-    await user.click(lastFrame)
-    expect(lastFrame).toHaveAttribute('aria-pressed', 'true')
-    expect(screen.getByText('20,999')).toBeVisible()
+    const video = screen.getByLabelText(/open4d basketball mesh sequence/i)
+    expect(video).toHaveAttribute('controls')
+    expect(video.querySelectorAll('source')).toHaveLength(2)
+    expect(screen.getByText('1.0 s')).toBeVisible()
 
     expect(screen.getByText(/bidirectional nearest-vertex distance/i)).toBeVisible()
   })
