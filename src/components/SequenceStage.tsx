@@ -1,10 +1,14 @@
+import { track } from '../lib/analytics'
+
 export function SequenceStage() {
   return (
-    <figure className="sequence-stage" aria-labelledby="sequence-caption">
-      <div className="sequence-stage__image">
+    <figure className="demo-stage" id="demo" aria-labelledby="demo-caption">
+      <div className="demo-stage__media">
         <video
-          aria-label="Open4D basketball mesh sequence"
+          aria-label="Open4D viewer playing a ten-frame OBJ mesh sequence"
           controls
+          onPlay={() => track('demo_started')}
+          onEnded={() => track('demo_completed')}
           controlsList="nodownload"
           playsInline
           preload="metadata"
@@ -17,27 +21,16 @@ export function SequenceStage() {
           Your browser does not support HTML video.
         </video>
       </div>
-
-      <div className="sequence-stage__panel">
-        <div>
-          <h2>Load and scrub a numbered mesh sequence.</h2>
-          <p>
-            This recording runs the repository viewer on ten basketball mesh
-            frames. It shows the frame number, source index, mesh size, orbit
-            view, and timeline together.
-          </p>
-        </div>
-
-        <dl className="sequence-readout">
-          <div><dt>Frames</dt><dd>10</dd></div>
-          <div><dt>Playback</dt><dd>10 fps</dd></div>
-          <div><dt>Length</dt><dd>1.0 s</dd></div>
-        </dl>
+      <div className="demo-stage__ledger">
+        <div><span>Input</span><strong>10 OBJ frames</strong></div>
+        <div><span>Playback</span><strong>10 fps</strong></div>
+        <div><span>Controls</span><strong>Play, pause, scrub, orbit</strong></div>
+        <div><span>Recording</span><strong>1 second</strong></div>
       </div>
-
-      <figcaption id="sequence-caption">
-        One-second recording of the basketball sequence in the TVMC viewer
-        example. Use the video controls to play, pause, or scrub.
+      <figcaption id="demo-caption">
+        Source-checkout viewer running the repository basketball example. The
+        browser controls play and scrub the recording; the recorded viewer has
+        its own sequence timeline.
       </figcaption>
     </figure>
   )

@@ -3,10 +3,13 @@ import { Github, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { links } from '../data/content'
+import { track } from '../lib/analytics'
 
 const navItems = [
-  { label: 'Research', to: '/work' },
-  { label: 'Status', to: '/status' },
+  { label: 'Quickstart', to: '/#quickstart' },
+  { label: 'Examples', to: '/examples' },
+  { label: 'Integrations', to: '/integrations' },
+  { label: 'API', to: '/api' },
 ]
 
 export function Header() {
@@ -15,27 +18,13 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link className="wordmark" to="/" aria-label="Open4D home">
-          Open<span>4D</span>
-        </Link>
-
+        <Link className="wordmark" to="/" aria-label="Open4D home">Open<span>4D</span></Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <NavLink key={item.label} to={item.to}>
-              {item.label}
-            </NavLink>
-          ))}
-          <a
-            className="github-link"
-            href={links.repository}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github aria-hidden="true" size={17} />
-            GitHub
+          {navItems.map((item) => <NavLink key={item.label} to={item.to}>{item.label}</NavLink>)}
+          <a className="github-link" href={links.repository} target="_blank" rel="noreferrer" onClick={() => track('github_clicked')}>
+            <Github aria-hidden="true" size={17} /> GitHub
           </a>
         </nav>
-
         <button
           className="menu-button"
           type="button"
@@ -47,7 +36,6 @@ export function Header() {
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
       </div>
-
       <AnimatePresence>
         {open && (
           <motion.nav
@@ -60,13 +48,9 @@ export function Header() {
             transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
           >
             {navItems.map((item) => (
-              <NavLink key={item.label} to={item.to} onClick={() => setOpen(false)}>
-                {item.label}
-              </NavLink>
+              <NavLink key={item.label} to={item.to} onClick={() => setOpen(false)}>{item.label}</NavLink>
             ))}
-            <a href={links.repository} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
+            <a href={links.repository} target="_blank" rel="noreferrer" onClick={() => track('github_clicked')}>GitHub</a>
           </motion.nav>
         )}
       </AnimatePresence>

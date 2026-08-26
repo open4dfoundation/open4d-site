@@ -18,30 +18,32 @@ describe('Open4D homepage', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: 'Tools for 3D data that changes over time.',
+        name: 'Mesh sequences, without another one-off script.',
       }),
     ).toBeInTheDocument()
-    expect(screen.getByText(/stable public I\/O and metrics APIs are next/i)).toBeInTheDocument()
-    expect(screen.getAllByRole('link', { name: /describe your workflow/i })[0]).toHaveAttribute(
-      'href', expect.stringContaining('/discussions'),
+    expect(screen.getByText(/source preview only/i)).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: /see the source preview/i })[0]).toHaveAttribute(
+      'href', expect.stringContaining('github.com/open4dfoundation/Open4D'),
     )
+    expect(screen.queryByText(/pip install open4d/i)).not.toBeInTheDocument()
   })
 
-  it('provides normal video playback and comparison details', () => {
+  it('provides normal video playback and a factual recording ledger', () => {
     renderPage()
 
-    const video = screen.getByLabelText(/open4d basketball mesh sequence/i)
+    const video = screen.getByLabelText(/open4d viewer playing a ten-frame obj mesh sequence/i)
     expect(video).toHaveAttribute('controls')
     expect(video.querySelectorAll('source')).toHaveLength(2)
-    expect(screen.getByText('1.0 s')).toBeVisible()
-
-    expect(screen.getByText(/bidirectional nearest-vertex distance/i)).toBeVisible()
+    expect(screen.getByText('10 OBJ frames')).toBeVisible()
+    expect(screen.getByText('Play, pause, scrub, orbit')).toBeVisible()
   })
 
-  it('keeps scope notes next to research results', () => {
+  it('puts own data, inspection, and limits in the main path', () => {
     renderPage()
 
-    expect(screen.getByText(/peak memory rose from about 144 MB to 372 MB/i)).toBeVisible()
-    expect(screen.getByText(/not yet a complete shared Open4D workflow/i)).toBeVisible()
+    expect(screen.getByRole('heading', { name: 'Use your own data next.' })).toBeVisible()
+    expect(screen.getByText(/without decoding the whole sequence/i)).toBeVisible()
+    expect(screen.getByRole('heading', { name: 'What the first API handles.' })).toBeVisible()
+    expect(screen.getByText(/point-cloud, gaussian, volume/i)).toBeVisible()
   })
 })

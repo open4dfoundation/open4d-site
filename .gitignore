@@ -1,6 +1,7 @@
 node_modules/
 dist/
 coverage/
+.context/
 playwright-report/
 test-results/
 .impeccable/review/*.png
