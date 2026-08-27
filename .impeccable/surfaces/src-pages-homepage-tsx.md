@@ -1,20 +1,20 @@
 ---
-version: 1
+version: 2
 slug: "src-pages-homepage-tsx"
 primary_target: "src/pages/HomePage.tsx"
-related_targets: ["src/pages/WorkPage.tsx","src/pages/StatusPage.tsx"]
+related_targets: ["src/pages/ExamplesPage.tsx","src/pages/TaskGuidePage.tsx","src/pages/IntegrationsPage.tsx","src/pages/ApiPage.tsx"]
 ---
 
 # Home surface brief
 
-- Scope: public homepage and its supporting Work and Status routes.
-- Visitor mode: Persuade.
-- Audience: researchers and engineers handling mesh, point-cloud, USD, and codec sequences.
-- Job: understand what Open4D can be checked today, inspect real output, and decide whether to describe a workflow problem.
-- Primary action: “Describe your workflow” in GitHub Discussions; secondary action: “Browse the repository.”
-- Proof: the complete viewer recording with native video controls, a three-column task-oriented repository register, one static horizontally scrollable comparison with a native error key, equal research records with local scope notes, a compact current-scope row, and a plain benchmark table on the Work route.
-- Constraints: use ordinary language; do not imply a stable shared API or complete workflow; keep every limitation next to its result; interface colors stay near-monochrome while source evidence keeps its native colors.
-- Chosen direction: a direct working reference on a warm-white measurement surface with carbon evidence fields, registered rules, and compressed sans-serif statements.
-- Memorable moment: a visitor can play, pause, or scrub the complete ten-frame viewer recording without the media being cropped or the surrounding layout changing size.
-- Responsive contract: navigation and wide layouts simplify at 1060px; registers stack and the comparison scrolls natively at 780px; the sequence well and evidence labels tighten at 480px.
-- Unresolved decisions: production domain, analytics policy, and whether feedback should remain in GitHub Discussions.
+- Scope: public homepage plus Examples, six task guides, Integrations, and API routes.
+- Visitor mode: learn and try.
+- Audience: Python developers with numbered OBJ or PLY triangle-mesh frames.
+- Job: open a frame folder as one sequence, see the expected result, then replace the sample path with personal data.
+- Primary action: “See the source preview.” Secondary action: “Watch the example.”
+- Proof: one uncropped native video, a licensed ten-frame sample, source-checkout commands, actual inspection output, one open/save/encode path, and limitations next to the quickstart flow.
+- Constraints: source preview only until PyPI and the release ledger permit publication; no universal-format, production-ready, broad representation, or research-performance claims.
+- Chosen direction: a direct working reference on a warm-white measurement surface with carbon code and media fields, registered rules, and near-monochrome controls.
+- Memorable moment: a normal video player shows the actual ten-frame viewer while a fixed ledger identifies the input, playback rate, controls, and GIF output.
+- Responsive contract: the split first screen stacks at 900px; evidence and limits stack at 780px; code remains horizontally keyboard-scrollable without widening the page.
+- Unresolved decisions: production domain, analytics provider, and a new capture showing setup, playback, scrubbing, and saved output in one short recording.

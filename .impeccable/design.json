@@ -1,150 +1,151 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-19T20:00:00Z",
+  "generatedAt": "2026-08-26T21:36:21Z",
   "title": "Design System: Open4D",
   "extensions": {
     "colorMeta": {
       "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#111318", "tonalRamp": ["#111318", "#242932", "#3d444e", "#616873", "#8a929e", "#b6bec8", "#e0e4e9", "#f7f8fa"] },
       "carbon": { "role": "primary", "displayName": "Carbon", "canonical": "#171a1c", "tonalRamp": ["#0d0f10", "#171a1c", "#292d2f", "#454a4c", "#6c7273", "#9ca1a0", "#d1d3d0", "#f2f2ee"] },
+      "media-carbon": { "role": "primary", "displayName": "Media Carbon", "canonical": "#222629", "tonalRamp": ["#101214", "#222629", "#353b3f", "#51585c", "#747b7e", "#a2a8a9", "#d3d6d4", "#f3f4f1"] },
       "utility-iron": { "role": "primary", "displayName": "Utility Iron", "canonical": "#32373a", "tonalRamp": ["#101213", "#171a1c", "#25292c", "#32373a", "#596063", "#858b8d", "#bcc0bf", "#eceeeb"] },
+      "supporting-ink": { "role": "neutral", "displayName": "Supporting Ink", "canonical": "#343938", "tonalRamp": ["#111313", "#252928", "#343938", "#555b59", "#7d8380", "#aaaeaa", "#d7d9d5", "#f5f5f1"] },
       "muted-ink": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#5f6362", "tonalRamp": ["#151717", "#2b2e2d", "#464a49", "#5f6362", "#8c908e", "#b6b9b6", "#dedfdb", "#f6f6f2"] },
       "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#fbfbf8", "tonalRamp": ["#171817", "#323330", "#535450", "#797a75", "#a5a69f", "#d0d0c9", "#ecece7", "#fbfbf8"] },
+      "white": { "role": "neutral", "displayName": "White", "canonical": "#ffffff", "tonalRamp": ["#191919", "#383838", "#595959", "#7f7f7f", "#a6a6a6", "#cccccc", "#eeeeee", "#ffffff"] },
       "utility-ground": { "role": "neutral", "displayName": "Utility Ground", "canonical": "#efefeb", "tonalRamp": ["#161716", "#30312f", "#50524f", "#757873", "#a1a39d", "#cbccc6", "#e8e8e3", "#efefeb"] },
       "utility-mist": { "role": "neutral", "displayName": "Utility Mist", "canonical": "#e2e3df", "tonalRamp": ["#121415", "#25292a", "#424748", "#676c6c", "#939896", "#bdc1be", "#e2e3df", "#f7f7f3"] },
       "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#c9cbc6", "tonalRamp": ["#171918", "#313432", "#525653", "#787d79", "#a3a7a3", "#c9cbc6", "#e8e9e5", "#f8f8f5"] },
       "rule-strong": { "role": "neutral", "displayName": "Strong Rule", "canonical": "#8f9491", "tonalRamp": ["#151716", "#2e3230", "#4e5451", "#747a77", "#8f9491", "#c0c4c1", "#e0e2de", "#f6f7f3"] },
       "focus-amber": { "role": "tertiary", "displayName": "Focus Amber", "canonical": "#b8791b", "tonalRamp": ["#2d1d08", "#563913", "#805817", "#9f6718", "#b8791b", "#d7a44f", "#edcc95", "#faf0dd"] },
-      "translucent-rule": { "role": "neutral", "displayName": "Dark-field Rule", "canonical": "rgba(255, 255, 255, 0.24)", "tonalRamp": ["rgba(255,255,255,0.08)", "rgba(255,255,255,0.12)", "rgba(255,255,255,0.18)", "rgba(255,255,255,0.24)", "rgba(255,255,255,0.32)", "rgba(255,255,255,0.45)", "rgba(255,255,255,0.62)", "rgba(255,255,255,0.82)"] },
-      "translucent-rule-strong": { "role": "neutral", "displayName": "Strong Dark-field Rule", "canonical": "rgba(255, 255, 255, 0.45)", "tonalRamp": ["rgba(255,255,255,0.08)", "rgba(255,255,255,0.14)", "rgba(255,255,255,0.24)", "rgba(255,255,255,0.32)", "rgba(255,255,255,0.45)", "rgba(255,255,255,0.58)", "rgba(255,255,255,0.72)", "rgba(255,255,255,0.88)"] },
-      "error-violet": { "role": "tertiary", "displayName": "Error 01 Violet", "canonical": "#24114e", "tonalRamp": ["#16092f", "#24114e", "#38206c", "#533d84", "#75639f", "#9e91bd", "#ccc4dd", "#f2eff7"] },
-      "error-indigo": { "role": "tertiary", "displayName": "Error 02 Indigo", "canonical": "#403ab6", "tonalRamp": ["#17143f", "#27236d", "#403ab6", "#615bd0", "#8580df", "#aaa7ea", "#d2d0f4", "#f2f1fb"] },
-      "error-blue": { "role": "tertiary", "displayName": "Error 03 Blue", "canonical": "#2e8bcb", "tonalRamp": ["#0d2a3e", "#174865", "#206a94", "#2e8bcb", "#60a9dc", "#91c7e9", "#c4e3f3", "#edf7fc"] },
-      "error-teal": { "role": "tertiary", "displayName": "Error 04 Teal", "canonical": "#35b889", "tonalRamp": ["#0d382b", "#175c46", "#238564", "#35b889", "#67cea8", "#97dfc5", "#c8efe0", "#effaf6"] },
-      "error-green": { "role": "tertiary", "displayName": "Error 05 Green", "canonical": "#9dc642", "tonalRamp": ["#29370c", "#485d17", "#708b28", "#9dc642", "#b9d56d", "#d1e59b", "#e6f1c7", "#f7fbe9"] },
-      "error-yellow": { "role": "tertiary", "displayName": "Error 06 Yellow", "canonical": "#e2bd32", "tonalRamp": ["#423508", "#715b0f", "#a88b1d", "#e2bd32", "#eace61", "#f0dc91", "#f6ebc0", "#fcf8e8"] },
-      "error-orange": { "role": "tertiary", "displayName": "Error 07 Orange", "canonical": "#e26b27", "tonalRamp": ["#401b08", "#702f0d", "#a84a18", "#e26b27", "#ec925a", "#f2b78d", "#f8d8bd", "#fdf2e9"] },
-      "error-red": { "role": "tertiary", "displayName": "Error 08 Red", "canonical": "#9f1f17", "tonalRamp": ["#330906", "#5b100c", "#811813", "#9f1f17", "#c34a40", "#dc8178", "#edb8b2", "#faecea"] }
+      "inverse-muted": { "role": "neutral", "displayName": "Inverse Muted", "canonical": "#dfe1de", "tonalRamp": ["#151716", "#303330", "#4f5450", "#757a75", "#a0a49f", "#c9ccc8", "#dfe1de", "#f7f8f5"] },
+      "code-text": { "role": "neutral", "displayName": "Code Text", "canonical": "#f5f6f2", "tonalRamp": ["#171817", "#313330", "#51534f", "#767873", "#a1a39c", "#cbcdc5", "#e8e9e3", "#f5f6f2"] },
+      "code-muted": { "role": "neutral", "displayName": "Code Muted", "canonical": "#bdc2be", "tonalRamp": ["#151817", "#2e3331", "#4c5350", "#707875", "#999f9b", "#bdc2be", "#dfe2df", "#f5f7f4"] },
+      "translucent-rule": { "role": "neutral", "displayName": "Dark-field Rule", "canonical": "rgba(255, 255, 255, 0.24)", "tonalRamp": ["rgba(255,255,255,0.08)", "rgba(255,255,255,0.12)", "rgba(255,255,255,0.18)", "rgba(255,255,255,0.24)", "rgba(255,255,255,0.32)", "rgba(255,255,255,0.45)", "rgba(255,255,255,0.62)", "rgba(255,255,255,0.82)"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "One blunt page-level statement." },
-      "headline": { "displayName": "Headline", "purpose": "Section arguments and interior-page headings." },
-      "title": { "displayName": "Title", "purpose": "Research records and instrument headings." },
-      "body": { "displayName": "Body", "purpose": "Explanations, evidence, and limitations." },
-      "label": { "displayName": "Measured Label", "purpose": "Versions, timestamps, values, states, and table coordinates." }
+      "display": { "displayName": "Display", "purpose": "The launch thesis and individual task-guide titles." },
+      "headline": { "displayName": "Headline", "purpose": "Workflow steps, limits, and interior-page headings." },
+      "title": { "displayName": "Title", "purpose": "The six task-guide titles and compact section titles." },
+      "body": { "displayName": "Body", "purpose": "Instructions, evidence, runtime notes, and known limits." },
+      "label": { "displayName": "Inspectable Label", "purpose": "Code labels, example counters, filenames, facts, formats, and timings." }
     },
     "shadows": [],
     "motion": [
-      { "name": "state", "value": "180ms ease", "purpose": "Hover, color, transform, and underline state changes." },
-      { "name": "frame-replace", "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Clipped fade between selected sequence frames." },
-      { "name": "mobile-menu", "value": "260ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Reveal and dismiss the full-width mobile navigation." }
+      { "name": "state", "value": "180ms ease", "purpose": "Button hover, link color, and navigation underline state changes." },
+      { "name": "mobile-menu", "value": "260ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Clipped reveal and dismissal of the full-width mobile navigation." },
+      { "name": "copy-confirmation", "value": "1800ms hold", "purpose": "Duration of the visible and announced Copied state." }
     ],
     "breakpoints": [
-      { "name": "navigation-and-wide-layout", "value": "1060px" },
-      { "name": "stacked-records", "value": "780px" },
-      { "name": "small-instrument", "value": "480px" }
+      { "name": "wide-launch-tighten", "value": "1120px" },
+      { "name": "navigation-collapse", "value": "1060px" },
+      { "name": "workflow-stack", "value": "900px" },
+      { "name": "narrow-evidence-stack", "value": "780px" },
+      { "name": "small-record-stack", "value": "500px" }
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Primary Source Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The primary workflow action on a neutral surface.",
-      "html": "<button class=\"ds-button-primary\">Describe your workflow <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
-      "css": ".ds-button-primary{min-height:50px;display:inline-flex;align-items:center;gap:11px;padding:0 19px;border:0;border-radius:4px;background:#32373a;color:#fff;font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-primary svg{width:17px;fill:none;stroke:currentColor;stroke-width:2}.ds-button-primary:hover{background:#171a1c;transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
+      "description": "The source-preview action on the warm measurement surface.",
+      "html": "<a class=\"ds-button-primary\" href=\"#\">See the source preview <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-button-primary{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:0 19px;border:0;border-radius:4px;background:#32373a;color:#fff;font:660 16px/1 'Archivo Variable',Arial,sans-serif;text-decoration:none;transition:background-color 180ms ease,transform 180ms ease}.ds-button-primary svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2}.ds-button-primary:hover{background:#171a1c;transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
-      "name": "Inverse Button",
+      "name": "Inverse Source Button",
       "kind": "button",
       "refersTo": "button-inverse",
-      "description": "The primary workflow action on the iron closing field.",
-      "html": "<button class=\"ds-button-inverse\">Describe your workflow</button>",
-      "css": ".ds-button-inverse{min-height:50px;padding:0 19px;border:0;border-radius:4px;background:#fff;color:#171a1c;font:660 16px/1 'Archivo Variable',Arial,sans-serif;transition:background-color 180ms ease,transform 180ms ease}.ds-button-inverse:hover{background:#e8e9e5;transform:translateY(-2px)}.ds-button-inverse:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
+      "description": "The repeated source-preview action on the closing Iron field.",
+      "html": "<a class=\"ds-button-inverse\" href=\"#\">See the source preview</a>",
+      "css": ".ds-button-inverse{min-height:50px;display:inline-flex;align-items:center;padding:0 19px;border:0;border-radius:4px;background:#fff;color:#171a1c;font:660 16px/1 'Archivo Variable',Arial,sans-serif;text-decoration:none;transition:background-color 180ms ease,transform 180ms ease}.ds-button-inverse:hover{background:#e8e9e5;transform:translateY(-2px)}.ds-button-inverse:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
       "name": "Text Link",
       "kind": "custom",
-      "description": "The secondary path to repository source or deeper evidence.",
-      "html": "<a class=\"ds-text-link\" href=\"#\">Browse the repository</a>",
-      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:9px;color:#171a1c;font:630 16px/1.4 'Archivo Variable',Arial,sans-serif;text-decoration-thickness:1px;text-underline-offset:5px}.ds-text-link:hover{color:#4e5452}.ds-text-link:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
+      "description": "The secondary path to the example, licensed sample, or supporting source detail.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Watch the example <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:9px;color:#171a1c;font:630 16px/1.4 'Archivo Variable',Arial,sans-serif;text-decoration-thickness:1px;text-underline-offset:5px}.ds-text-link svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2}.ds-text-link:hover{color:#4e5452}.ds-text-link:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
       "name": "Primary Navigation",
       "kind": "nav",
       "description": "Sticky plain-text navigation with a measured active underline.",
-      "html": "<nav class=\"ds-nav\"><strong>Open<span>4D</span></strong><div><a href=\"#\">Research</a><a class=\"active\" href=\"#\">Status</a><a href=\"#\">GitHub</a></div></nav>",
-      "css": ".ds-nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #c9cbc6;background:rgba(239,239,235,.96);color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-nav strong{font-size:24px;letter-spacing:-.035em}.ds-nav strong span{color:#32373a}.ds-nav div{display:flex;gap:30px}.ds-nav a{position:relative;color:inherit;text-decoration:none;font-weight:590}.ds-nav a.active:after,.ds-nav a:hover:after{content:'';position:absolute;right:0;bottom:-7px;left:0;height:2px;background:#32373a}.ds-nav a:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><strong>Open<span>4D</span></strong><div><a class=\"active\" href=\"#\">Quickstart</a><a href=\"#\">Examples</a><a href=\"#\">Integrations</a><a href=\"#\">API</a><a href=\"#\">GitHub</a></div></nav>",
+      "css": ".ds-nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:0 16px;border-bottom:1px solid #c9cbc6;background:rgba(239,239,235,.96);color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-nav strong{font-size:24px;letter-spacing:-.035em}.ds-nav strong span{color:#32373a}.ds-nav div{display:flex;gap:24px}.ds-nav a{position:relative;color:inherit;text-decoration:none;font-weight:590}.ds-nav a:after{content:'';position:absolute;right:0;bottom:-7px;left:0;height:2px;background:#32373a;transform:scaleX(0)}.ds-nav a.active:after,.ds-nav a:hover:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     },
     {
-      "name": "Scope Label",
-      "kind": "chip",
-      "refersTo": "status-label",
-      "description": "A compact factual state or implementation-scope label.",
-      "html": "<span class=\"ds-scope-label\">Verified partial</span>",
-      "css": ".ds-scope-label{display:inline-block;width:max-content;padding:4px 7px;border:1px solid #8f9491;border-radius:3px;background:transparent;color:#111318;font:620 12px/1.4 'Archivo Variable',Arial,sans-serif}.ds-scope-label:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
-    },
-    {
-      "name": "Sequence Stage",
+      "name": "Native Video Ledger",
       "kind": "custom",
-      "description": "The complete viewer recording with native video controls and three source facts.",
-      "html": "<div class=\"ds-stage\"><div class=\"ds-stage-image\">NATIVE VIDEO</div><section><h3>Load and scrub a numbered mesh sequence.</h3><div class=\"ds-video-facts\"><span>10 frames</span><span>10 fps</span><span>1.0 s</span></div></section></div>",
-      "css": ".ds-stage{display:grid;grid-template-columns:.68fr 1fr;border:1px solid #8f9491;background:#fbfbf8;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-stage-image{min-height:240px;display:grid;place-items:center;background:#222629;color:#fbfbf8;font:13px 'Source Code Pro Variable',monospace}.ds-stage section{padding:28px;border-left:1px solid #8f9491}.ds-stage h3{font-size:28px;line-height:1;letter-spacing:-.035em}.ds-video-facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:46px;border:1px solid #8f9491}.ds-video-facts span{padding:18px;border-right:1px solid #c9cbc6;font:13px 'Source Code Pro Variable',monospace}.ds-video-facts span:last-child{border-right:0}"
+      "refersTo": "media-field",
+      "description": "One uncropped native video field with four fixed source facts.",
+      "html": "<figure class=\"ds-video\"><div class=\"ds-video-media\"><span>NATIVE VIDEO<br>560 × 620<br>OBJECT-FIT: CONTAIN</span></div><div class=\"ds-video-ledger\"><div><span>Input</span><strong>10 OBJ frames</strong></div><div><span>Playback</span><strong>10 fps</strong></div><div><span>Controls</span><strong>Play, pause, scrub, orbit</strong></div><div><span>Recording</span><strong>1 second</strong></div></div></figure>",
+      "css": ".ds-video{margin:0;border:1px solid #8f9491;background:#fbfbf8;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-video-media{min-height:280px;display:grid;place-items:center;padding:22px;background:#222629;color:#bdc2be;text-align:center;font:12px/1.6 'Source Code Pro Variable',monospace}.ds-video-ledger{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #8f9491;border-left:1px solid #c9cbc6}.ds-video-ledger>div{display:grid;gap:6px;padding:12px 14px;border-right:1px solid #c9cbc6;border-bottom:1px solid #c9cbc6}.ds-video-ledger span{color:#5f6362;font:11px/1.4 'Source Code Pro Variable',monospace;letter-spacing:.05em;text-transform:uppercase}.ds-video-ledger strong{font-size:13px}"
     },
     {
-      "name": "Repository Register",
+      "name": "Runnable Code Block",
       "kind": "custom",
-      "description": "A task-oriented ruled register for repository scope and implementation detail.",
-      "html": "<div class=\"ds-register\"><header><span>Task</span><span>Where it lives</span><span>What is there</span></header><div><strong>Load and inspect</strong><span>Shared tools</span><span>Frame folders, OpenUSD, playback, and frame information</span></div><div><strong>Compress</strong><span>Research projects</span><span>Independent codec pipelines</span></div></div>",
-      "css": ".ds-register{border-top:1px solid #8f9491;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-register header,.ds-register>div{display:grid;grid-template-columns:.8fr .7fr 1fr;gap:28px;padding:20px 0;border-bottom:1px solid #c9cbc6}.ds-register header{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;letter-spacing:.05em;text-transform:uppercase}.ds-register>div span{color:#5f6362}"
+      "refersTo": "code-block",
+      "description": "A square, keyboard-scrollable code instrument with copy feedback.",
+      "html": "<div class=\"ds-code\"><div class=\"ds-code-bar\"><span>Tested program</span><button type=\"button\">Copy</button></div><pre tabindex=\"0\"><code>from open4d.io import open_sequence\n\nwith open_sequence(\"my_frames/\", fps=30) as sequence:\n    print(len(sequence), sequence.duration)</code></pre></div>",
+      "css": ".ds-code{min-width:0;border:1px solid #8f9491;background:#171a1c;color:#f5f6f2}.ds-code-bar{min-height:43px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 12px 0 16px;border-bottom:1px solid rgba(255,255,255,.24)}.ds-code-bar span{color:#bdc2be;font:11px/1.4 'Source Code Pro Variable',monospace;letter-spacing:.05em;text-transform:uppercase}.ds-code-bar button{min-height:32px;padding:0 8px;border:0;background:transparent;color:#f0f1ed;font:12px 'Archivo Variable',Arial,sans-serif}.ds-code-bar button:hover{background:rgba(255,255,255,.1)}.ds-code :focus-visible{outline:3px solid #b8791b;outline-offset:3px}.ds-code pre{margin:0;padding:22px;overflow-x:auto;color:#f5f6f2;font:13px/1.72 'Source Code Pro Variable',monospace;tab-size:4}"
     },
     {
-      "name": "Error Key",
+      "name": "Folder-to-Sequence Instrument",
       "kind": "custom",
-      "description": "The only saturated interface element: an ordered scientific distance scale.",
-      "html": "<div class=\"ds-error-key\"><div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p><span>0.0%</span><span>decoded-to-source distance</span><span>1.5%</span></p></div>",
-      "css": ".ds-error-key{padding:16px;background:#171a1c;color:#e2e4e1;font:12px 'Source Code Pro Variable',monospace}.ds-error-key>div{display:grid;grid-template-columns:repeat(8,1fr);height:10px}.ds-error-key i:nth-child(1){background:#24114e}.ds-error-key i:nth-child(2){background:#403ab6}.ds-error-key i:nth-child(3){background:#2e8bcb}.ds-error-key i:nth-child(4){background:#35b889}.ds-error-key i:nth-child(5){background:#9dc642}.ds-error-key i:nth-child(6){background:#e2bd32}.ds-error-key i:nth-child(7){background:#e26b27}.ds-error-key i:nth-child(8){background:#9f1f17}.ds-error-key p{display:flex;justify-content:space-between;gap:16px;margin:7px 0 0}"
+      "description": "A ruled source-to-result explanation of the first Python sequence contract.",
+      "html": "<div class=\"ds-contract\"><div class=\"ds-files\"><strong>my_frames/</strong><span>frame_0001.ply</span><span>frame_0002.ply</span><span>…</span><span>frame_0010.ply</span></div><code>open_sequence(\"my_frames/\", fps=30) →</code><div class=\"ds-object\"><span>Sequence</span><strong>10 frames</strong><dl><div><dt>Access</dt><dd>lazy</dd></div><div><dt>Timing</dt><dd>30 fps</dd></div><div><dt>Geometry</dt><dd>triangle mesh</dd></div></dl></div></div>",
+      "css": ".ds-contract{display:grid;grid-template-columns:.8fr auto 1fr;gap:28px;align-items:stretch;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-files,.ds-object{display:grid;align-content:center;padding:24px 0;border-block:1px solid #8f9491}.ds-files{font:12px/1.8 'Source Code Pro Variable',monospace}.ds-files span{padding-left:18px;color:#5f6362}.ds-contract>code{display:grid;place-items:center;max-width:22ch;color:#5f6362;font:11px/1.5 'Source Code Pro Variable',monospace;text-align:center}.ds-object>span{color:#5f6362;font:11px 'Source Code Pro Variable',monospace;text-transform:uppercase}.ds-object>strong{margin-top:8px;font-size:28px}.ds-object dl{display:grid;grid-template-columns:repeat(3,1fr);margin:20px 0 0;border-top:1px solid #c9cbc6}.ds-object dl div{padding:12px 8px 0 0}.ds-object dt{color:#5f6362;font-size:11px;text-transform:uppercase}.ds-object dd{margin:5px 0 0;font:11px 'Source Code Pro Variable',monospace}"
     },
     {
-      "name": "Benchmark Table",
+      "name": "First-API Limits",
       "kind": "custom",
-      "description": "A plain table for exact baseline, revision, memory, and validation evidence.",
-      "html": "<div class=\"ds-benchmark\"><div class=\"head\"><span>Measurement</span><span>Baseline</span><span>Parallel revision</span></div><div><strong>Wall time</strong><span>1.978 s</span><span>0.704 s</span></div><div><strong>Peak memory</strong><span>144 MB</span><span>372 MB</span></div></div>",
-      "css": ".ds-benchmark{border-top:1px solid #8f9491;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-benchmark>div{display:grid;grid-template-columns:1fr .7fr .7fr;gap:22px;padding:20px 0;border-bottom:1px solid #c9cbc6}.ds-benchmark .head{color:#5f6362;font:12px 'Source Code Pro Variable',monospace;text-transform:uppercase}.ds-benchmark>div:not(.head) span{font-family:'Source Code Pro Variable',monospace}"
+      "description": "Supported work and the adjacent first-package boundary, presented with equal factual weight.",
+      "html": "<section class=\"ds-limits\"><div><h3>What the first API handles.</h3><p>Finite triangle-mesh sequences. OBJ and PLY are built in.</p></div><div><h4>Not all in the first package</h4><p>Point-cloud, Gaussian, volume, USD-sequence, and live-stream interfaces.</p></div></section>",
+      "css": ".ds-limits{display:grid;grid-template-columns:1fr 1fr;border-block:1px solid #8f9491;background:#fbfbf8;color:#111318;font-family:'Archivo Variable',Arial,sans-serif}.ds-limits>div{padding:32px}.ds-limits>div:first-child{border-right:1px solid #8f9491}.ds-limits h3{max-width:16ch;margin:0 0 20px;font-size:31px;line-height:1;letter-spacing:-.035em}.ds-limits h4{margin:4px 0 20px;font-size:18px}.ds-limits p{margin:0;color:#5f6362;line-height:1.6}"
+    },
+    {
+      "name": "Task Guide Row",
+      "kind": "custom",
+      "description": "One of exactly six numbered job guides in a full-width ruled index.",
+      "html": "<a class=\"ds-guide\" href=\"#\"><span>01</span><div><strong>View a folder of OBJ files as an animation in Python</strong><p>You have one OBJ triangle mesh per frame and need to play the folder in numeric filename order.</p></div><b aria-hidden=\"true\">→</b></a>",
+      "css": ".ds-guide{display:grid;grid-template-columns:70px 1fr auto;gap:44px;align-items:start;padding:32px 0;border-block:1px solid #c9cbc6;color:#111318;font-family:'Archivo Variable',Arial,sans-serif;text-decoration:none}.ds-guide>span{color:#5f6362;font:12px 'Source Code Pro Variable',monospace}.ds-guide strong{font-size:24px;line-height:1.08;letter-spacing:-.03em}.ds-guide p{max-width:65ch;margin:10px 0 0;color:#5f6362;line-height:1.55}.ds-guide:hover strong{text-decoration:underline;text-underline-offset:6px}.ds-guide:focus-visible{outline:3px solid #b8791b;outline-offset:3px}"
     }
   ],
   "narrative": {
     "northStar": "The Working Reference",
-    "overview": "Open4D reads like a direct working reference that can be checked against the repository. Large plain statements name the job; real frames, task registers, measurements, and local scope notes carry the argument. The visual system is bright, technical, and measured without imitating a terminal or a science-fiction display. The page stays flat and near-monochrome. Scale, long rules, table-like registers, and full-width carbon or iron fields create hierarchy.",
+    "overview": "Open4D is a direct working reference for one concrete result: a frame folder becomes one usable Python sequence. The homepage refuses to become a research catalogue. It presents the moving result, source-preview state, licensed sample, a path from sample data to personal data, the first API's limits, and the inspect, save, encode, and decode workflow in that order. The visual world is a warm-white, near-monochrome measurement surface. Graphite Archivo statements, Source Code Pro readouts, carbon code and media fields, long ruled registers, and square instrument panels make the page feel inspectable without imitating a terminal. Real output carries the proof. The incumbent working-reference form is preserved from direction seed `45e805ce`.",
     "keyCharacteristics": [
-      "One complete viewer recording shows real changing-3D output before architecture or ambition.",
-      "Task-oriented registers expose repository breadth without turning it into a feature-card grid.",
-      "Equal research records keep codecs, reconstruction, and reproducibility work at the same visual level.",
-      "Compact scope language states what works now without letting maturity messaging dominate the page."
+      "The first viewport pairs exact launch copy and the source action with one normal, uncropped native video and a fixed factual ledger.",
+      "The evidence chain moves from licensed sample to personal data, then through inspect, save, encode, decode, and six task guides.",
+      "Limitations stay beside the capability or result they qualify; release state never becomes a destination or catalogue.",
+      "The system is flat, ruled, square, and nearly monochrome; code, media, output, and measurements provide the visual interest."
     ],
     "rules": [
-      { "name": "The Monochrome Interface Rule", "body": "Interface controls, type, surfaces, and state remain neutral; saturated hues are not brand accents.", "section": "colors" },
-      { "name": "The Scientific Color Is Data Rule", "body": "Violet, indigo, blue, teal, green, yellow, orange, and red appear only as the ordered error scale or inside source imagery that already encodes measurements.", "section": "colors" },
-      { "name": "The Translucency Is a Rule Rule", "body": "Semi-transparent white is reserved for one-pixel dividers and media borders on dark fields; it is never a glass surface, overlay material, or decorative wash.", "section": "colors" },
+      { "name": "The Near-Monochrome Rule", "body": "Interface controls, type, surfaces, and states remain neutral; the recorded mesh and operating-system video controls may carry their native source color.", "section": "colors" },
+      { "name": "The Focus Color Has One Job Rule", "body": "Amber appears only in the visible keyboard-focus outline.", "section": "colors" },
+      { "name": "The Translucency Is a Rule Rule", "body": "Semi-transparent white is reserved for one-pixel dividers on dark fields; it is never a glass surface, overlay material, or decorative wash.", "section": "colors" },
       { "name": "The Plain Sentence Rule", "body": "Headlines state the task, result, or limitation in ordinary language; category terms do not become slogans.", "section": "typography" },
-      { "name": "The Mono Means Measured Rule", "body": "Monospace type signals a value, index, version, timestamp, state, or table coordinate—not a decorative technical mood.", "section": "typography" },
-      { "name": "The Flat by Default Rule", "body": "A surface earns separation through structure and contrast, never through a decorative shadow.", "section": "elevation" }
+      { "name": "The Mono Means Inspectable Rule", "body": "Monospace type signals code, a filename, value, index, environment, format, timing fact, or interface state, never a decorative technical mood.", "section": "typography" },
+      { "name": "The Flat by Default Rule", "body": "A surface earns separation through structure, contrast, and a ruled edge, never through a decorative shadow.", "section": "elevation" }
     ],
     "dos": [
-      "Do make ‘Describe your workflow’ the primary action and ‘Browse the repository’ the secondary action.",
-      "Do put a real frame, result, measurement, or repository location next to capability statements.",
-      "Do keep the interface monochrome so source media and measured error retain meaning.",
-      "Do preserve native horizontal scrolling for the comparison on narrow screens.",
-      "Do keep limitations visually adjacent to the result they qualify.",
-      "Do honor reduced-motion preferences for authored navigation motion."
+      "Do keep “See the source preview” primary until an approved package release changes the action.",
+      "Do show the exact launch thesis beside one uncropped native video and its fixed four-fact ledger.",
+      "Do move from licensed sample to personal data before expanding into inspect, save, encode, decode, and the six job guides.",
+      "Do keep every limit beside the command, result, runtime, or capability it qualifies.",
+      "Do make code keyboard-scrollable, video user-controlled, focus obvious, copy feedback announced, and all meaning available as text.",
+      "Do retain the skip link, semantic headings, labeled navigation, hidden decorative icons, reduced-motion support, and a layout that works from 320px upward.",
+      "Do preserve the provider-neutral analytics event names and collect no source path or mesh content."
     ],
     "donts": [
-      "Don't invent uploads, dashboards, APIs, format support, or roadmap states that the repository does not verify.",
-      "Don't autoplay or resize the sequence or comparison evidence during playback.",
-      "Don't turn the three-row benchmark evidence into a decorative graphic.",
-      "Don't add gradients, glow, glass, floating blobs, shadows, or generic 3D decoration.",
-      "Don't organize the site as a repeated grid of rounded feature cards.",
-      "Don't promote scientific error colors into interface accents.",
-      "Don't hide unfinished work behind aspirational language or duplicate it across large maturity sections."
+      "Don't reorganize the homepage around repository breadth, project maturity, or a catalogue of research areas.",
+      "Don't claim a published package, universal 4D format, broad representation support, or production readiness.",
+      "Don't autoplay, crop, replace, or custom-skin the normal HTML video player.",
+      "Don't truncate, wrap into unreadability, or visually fake runnable code and actual output.",
+      "Don't add gradients, glow, glass, floating decoration, shadows, generic 3D art, or a saturated brand accent.",
+      "Don't turn examples, limits, integrations, or API groups into a repeated grid of rounded cards.",
+      "Don't use em dashes, superlatives, buzzwords, emoji, or aspirational language to hide unfinished work."
     ]
   }
 }

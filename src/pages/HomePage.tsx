@@ -1,168 +1,217 @@
-import { ArrowRight, ArrowUpRight, Github } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Download, Github } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { CodeBlock } from '../components/CodeBlock'
 import { SequenceStage } from '../components/SequenceStage'
-import { links, repositoryAreas, researchStories } from '../data/content'
+import {
+  codecCode,
+  inspectCode,
+  inspectOutput,
+  links,
+  manifestCode,
+  ownDataCode,
+  referenceCodecs,
+  sourceSetup,
+  taskGuides,
+} from '../data/content'
+import { track } from '../lib/analytics'
 
 export function HomePage() {
+  useEffect(() => track('quickstart_page_viewed'), [])
+
   return (
     <main>
-      <section className="hero page-shell">
-        <div className="hero__copy">
-          <h1>Tools for 3D data that changes over time.</h1>
-          <div className="hero__intro">
-            <p>
-              Open4D brings sequence loading, viewing, comparison, compression
-              research, reconstruction, and integrations into one open repository.
-            </p>
-            <p className="scope-note">
-              Start with the shared viewer examples. The larger research projects
-              keep their own setup and status.
-            </p>
-            <div className="hero__actions">
-              <a className="button button--primary" href={links.discussions} target="_blank" rel="noreferrer">
-                Describe your workflow
-                <ArrowUpRight aria-hidden="true" />
-              </a>
-              <a className="text-link" href={links.repository} target="_blank" rel="noreferrer">
-                <Github aria-hidden="true" />
-                Browse the repository
-              </a>
-            </div>
+      <section className="launch-hero page-shell">
+        <div className="launch-hero__copy">
+          <p className="eyebrow">Open source Python tools for 3D data over time</p>
+          <h1>Mesh sequences, without another <span className="keep-together">one-off script.</span></h1>
+          <p className="launch-hero__description">
+            Open a folder of OBJ or PLY frames as one Python sequence. Inspect it,
+            preserve its timing, compress it, decode it, and play it.
+          </p>
+          <div className="hero__actions">
+            <a className="button button--primary" href={links.sourcePreview} target="_blank" rel="noreferrer" onClick={() => track('github_clicked')}>
+              See the source preview <ArrowUpRight aria-hidden="true" />
+            </a>
+            <a className="text-link" href="#demo">Watch the example <ArrowRight aria-hidden="true" /></a>
           </div>
+          <p className="release-note">
+            Source preview only. The PyPI package is not published while the release ledger remains blocked.
+          </p>
         </div>
-
         <SequenceStage />
       </section>
 
-      <section className="repository-section page-shell" id="repository-map">
+      <section className="quickstart-section page-shell" id="quickstart">
         <div className="section-heading section-heading--split">
-          <h2>Find the part that matches your job.</h2>
+          <h2>Run the source preview.</h2>
           <p>
-            The repository is wider than any one codec. This map separates the
-            shared tools from research pipelines and tool-specific integrations.
+            The lightweight package uses NumPy. The player extra adds the Qt viewer,
+            OpenGL rendering, GIF export, and comparison tools.
           </p>
         </div>
-
-        <div className="repository-table" role="table" aria-label="Open4D repository areas">
-          <div className="repository-table__header" role="row">
-            <span role="columnheader">Task</span>
-            <span role="columnheader">Where it lives</span>
-            <span role="columnheader">What is there</span>
-          </div>
-          {repositoryAreas.map((area) => (
-            <div className="repository-table__row" role="row" key={area.task}>
-              <strong role="cell" data-label="Task">{area.task}</strong>
-              <span role="cell" data-label="Where it lives" className="scope-label">{area.scope}</span>
-              <p role="cell" data-label="What is there">{area.detail}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="comparison-section">
-        <div className="page-shell comparison-section__inner">
-          <div className="comparison-layout">
-            <div className="comparison-section__copy">
-              <h2>Put decoded results beside the source.</h2>
-              <p>
-                The comparison example uses one camera and one frame position for
-                every sequence, then colors decoded vertices by their distance from
-                the source. This frame places N4MC, QNDF, TVMC, and TSMC beside the
-                same basketball source mesh.
-              </p>
-              <dl className="comparison-facts">
-                <div><dt>View</dt><dd>Reference plus four decoded sequences</dd></div>
-                <div><dt>Measure</dt><dd>Bidirectional nearest-vertex distance</dd></div>
-                <div><dt>Report</dt><dd>Per-frame RMS, maximum distance, and PSNR</dd></div>
-              </dl>
-            </div>
-
-            <figure className="comparison-figure">
-              <div className="comparison-viewport" role="region" tabIndex={0} aria-label="Scrollable comparison figure">
-                <div className="comparison-canvas">
-                  <img
-                    src="/media/comparison-panels.jpg"
-                    alt="Reference basketball mesh beside N4MC, QNDF, TVMC, and TSMC decoded results"
-                    width="1400"
-                    height="444"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="error-key" aria-label="Error color scale from zero to 1.5 percent">
-                    <div aria-hidden="true">
-                      <span /><span /><span /><span /><span /><span /><span /><span />
-                    </div>
-                    <p><span>0.0%</span><span>decoded-to-source distance</span><span>1.5%</span></p>
-                  </div>
-                </div>
-              </div>
-              <figcaption>
-                Basketball comparison renderer at one aligned frame. Color reports
-                decoded-to-source distance as a percentage of the bounding-box diagonal.
-              </figcaption>
-            </figure>
+        <div className="quickstart-grid">
+          <CodeBlock code={sourceSetup} label="macOS or Linux setup" language="shell" copyEvent="install_command_copied" />
+          <div className="quickstart-result">
+            <h3>Then inspect, view, or save the sample</h3>
+            <CodeBlock
+              code={'python examples/visualization/visualize_sequence.py open4d-mesh-sequence/obj --info\npython open4d-mesh-sequence/view_sample.py\npython open4d-mesh-sequence/save_sample_gif.py'}
+              label="Sample commands"
+              language="shell"
+            />
+            <a className="text-link" href={links.sample} download onClick={() => track('starter_data_downloaded')}>
+              <Download aria-hidden="true" /> Download the website sample
+            </a>
+            <p>Unzip it in the Open4D checkout before running the commands. Windows uses <code>.venv\Scripts\activate</code>. A graphical session is required for the viewer.</p>
           </div>
         </div>
       </section>
 
-      <section className="work-section page-shell" id="research">
-        <div className="section-heading section-heading--split">
-          <h2>Decoder speed, Meta Quest 3 playback, and reproducibility.</h2>
-          <p>
-            These are separate pieces of work. Each row keeps the result beside its
-            test conditions and links to the test record, project page, or paper.
-          </p>
-        </div>
-
-        <div className="research-register">
-          {researchStories.map((story) => (
-            <article className="research-record" key={story.id}>
-              <div className="research-record__id">
-                <span>{story.id.toUpperCase()}</span>
-                <span>{story.id === 'vdmc' ? 'Decoder test' : story.id === 'tsmc' ? 'Scene mesh codec' : 'Reproducibility'}</span>
-              </div>
-              <div>
-                <h3>{story.title}</h3>
-                <p>{story.summary}</p>
-              </div>
-              <div className="research-record__note">
-                <p>{story.limitation}</p>
-                <a href={story.href} target="_blank" rel="noreferrer">
-                  {story.linkLabel}<ArrowUpRight aria-hidden="true" />
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="work-section__footer">
-          <p>Browse codecs, reconstruction, integrations, and shared tools together.</p>
-          <Link className="text-link" to="/work">Open the research index <ArrowRight aria-hidden="true" /></Link>
-        </div>
-      </section>
-
-      <section className="current-scope page-shell">
-        <div>
-          <h2>Current scope</h2>
-          <p>
-            Shared geometry objects, viewer examples, comparison code, and an Open3D
-            adapter are usable now. Stable public I/O and metrics APIs are next.
-          </p>
-        </div>
-        <Link className="text-link" to="/status">Read status by area <ArrowRight aria-hidden="true" /></Link>
-      </section>
-
-      <section className="question-section">
-        <div className="page-shell question-section__inner">
-          <h2>Which script is holding your 3D workflow together?</h2>
-          <div className="question-section__body">
+      <section className="own-data-section">
+        <div className="page-shell own-data-section__inner">
+          <div>
+            <h2>Use your own data next.</h2>
             <p>
-              Tell us what data you use, which tools or formats it moves between,
-              and the step that still needs custom code. A short description is enough.
+              Numbered filenames are ordered by their last integer. The folder is listed
+              immediately, but each mesh is decoded only when its frame is requested.
             </p>
-            <a className="button button--inverse" href={links.discussions} target="_blank" rel="noreferrer">
-              Describe your workflow
-              <ArrowUpRight aria-hidden="true" />
+          </div>
+          <CodeBlock code={ownDataCode} label="my_sequence.py" />
+        </div>
+      </section>
+
+      <section className="sequence-contract page-shell">
+        <div className="section-heading section-heading--split">
+          <h2>A folder becomes one sequence.</h2>
+          <p>
+            Open4D orders the frames, keeps their source indices and timestamps, and
+            decodes a mesh only when it is requested.
+          </p>
+        </div>
+        <div className="contract-flow" aria-label="Folder to lazy Python sequence">
+          <div className="file-tree">
+            <strong>my_frames/</strong>
+            <span>frame_0001.ply</span>
+            <span>frame_0002.ply</span>
+            <span>frame_0003.ply</span>
+            <span>...</span>
+            <span>frame_0010.ply</span>
+          </div>
+          <div className="contract-call">
+            <code>open_sequence(&quot;my_frames/&quot;, fps=30)</code>
+            <ArrowRight aria-hidden="true" />
+          </div>
+          <div className="sequence-object">
+            <span>Sequence</span>
+            <strong>10 frames</strong>
+            <dl>
+              <div><dt>Access</dt><dd>lazy</dd></div>
+              <div><dt>Timing</dt><dd>30 fps</dd></div>
+              <div><dt>Geometry</dt><dd>triangle mesh</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section className="limits-section">
+        <div className="page-shell limits-section__inner">
+          <div>
+            <h2>What the first API handles.</h2>
+            <p>
+              Finite triangle-mesh sequences. OBJ and PLY are built in. Trimesh adds
+              GLB, glTF, OFF, and STL. The base dependency is NumPy.
+            </p>
+          </div>
+          <div className="limits-section__not-yet">
+            <h3>Not all in the first package</h3>
+            <p>
+              Point-cloud, Gaussian, volume, USD-sequence, and live-stream interfaces.
+              Research codecs and native V-DMC tools also keep their own setup.
+            </p>
+            <a href={links.releaseLedger} target="_blank" rel="noreferrer">
+              Read the release ledger <ArrowUpRight aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="inspect-section">
+        <div className="page-shell inspect-section__inner">
+          <div className="inspect-section__copy">
+            <h2>Check it before loading everything.</h2>
+            <p>
+              Read frame count, timing, format, and topology without decoding the whole sequence.
+            </p>
+          </div>
+          <div className="inspect-section__evidence">
+            <CodeBlock code={inspectCode} label="inspect.py" />
+            <CodeBlock code={inspectOutput} label="Actual output" language="text" />
+          </div>
+        </div>
+      </section>
+
+      <section className="manifest-section page-shell">
+        <div className="manifest-section__copy">
+          <h2>Save timing with the frames.</h2>
+          <p>
+            Write OBJ or PLY frames with an Open4D manifest so ordering, timestamps,
+            metadata, and topology declarations can be opened again.
+          </p>
+          <p className="plain-limit">The manifest describes a directory. It is not a universal 4D format.</p>
+        </div>
+        <div>
+          <CodeBlock code={manifestCode} label="save_sequence.py" />
+          <div className="manifest-result" aria-label="Files written by write_sequence">
+            <span>saved_frames/</span>
+            <span>frame_000000.ply</span>
+            <span>frame_000001.ply</span>
+            <span>open4d.sequence.json</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="codec-section page-shell">
+        <div className="section-heading section-heading--split">
+          <h2>Encode and decode through one API.</h2>
+          <p>
+            Use the same Python calls for the built-in reference storage choices and
+            for separately installed codec adapters.
+          </p>
+        </div>
+        <div className="codec-layout">
+          <CodeBlock code={codecCode} label="round_trip.py" />
+          <div className="codec-register" role="list" aria-label="Built-in lossless reference storage choices">
+            {referenceCodecs.map(([name, detail]) => (
+              <div role="listitem" key={name}><strong>{name}</strong><span>{detail}</span></div>
+            ))}
+            <p>All five are lossless reference storage choices. They are not presented as geometry-compression research.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="examples-section page-shell" id="examples">
+        <div className="section-heading section-heading--split">
+          <h2>Start with the job you have.</h2>
+          <p>Each guide gives one program, one expected result, its environment, and its limits.</p>
+        </div>
+        <div className="example-index">
+          {taskGuides.map((guide, index) => (
+            <Link to={`/examples/${guide.slug}`} key={guide.slug}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <strong>{guide.title}</strong>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="source-close">
+        <div className="page-shell source-close__inner">
+          <h2>Try one folder before reading the whole repository.</h2>
+          <div>
+            <p>Clone the source, open the licensed sample, then replace its path with your own OBJ or PLY folder.</p>
+            <a className="button button--inverse" href={links.sourcePreview} target="_blank" rel="noreferrer" onClick={() => track('github_clicked')}>
+              <Github aria-hidden="true" /> See the source preview
             </a>
           </div>
         </div>
